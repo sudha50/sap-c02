@@ -1,0 +1,149 @@
+
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Domain 3 — Continuous Improvement</title>
+<style>
+  :root {--bg:#0b1220;--fg:#e8ecf1;--muted:#97a3b6;--card:#0f1629;--border:#1d263d;}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji";}
+  .page{display:grid;grid-template-columns:260px minmax(680px,1fr) 300px;gap:16px;padding:20px 24px;}
+  @media(max-width:1200px){.page{grid-template-columns:1fr;}aside,nav{position:static;order:-1;}}
+  header{grid-column:1 / -1;margin-bottom:6px;}
+  h1{margin:6px 0 2px;font-size:22px;letter-spacing:.3px;}
+  .subtitle{color:var(--muted);font-size:13px;}
+  .content{display:flex;flex-direction:column;gap:16px;}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px 16px;}
+  .qblock{white-space:pre-wrap;background:#0c1426;border:1px solid #1b2440;border-radius:12px;padding:12px 14px;}
+  .row{margin-top:10px} .ans{color:#34d399;font-weight:700} .keys{color:#60a5fa} .elim{color:#fb7185;font-weight:700} .analogy{color:#c084fc;font-style:italic}
+  .hr{height:1px;background:#1d263d;margin:10px 0;}
+  nav{position:sticky;top:12px;align-self:start;max-height:calc(100vh - 24px);overflow:auto}
+  .index{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px} .index a{color:#9fb4ff;text-decoration:none;font-size:13px} .index a:hover{text-decoration:underline}
+  .qid{color:#9fb4ff;font-weight:600;margin-bottom:6px}
+  aside{position:sticky;top:12px;align-self:start;max-height:calc(100vh - 24px);overflow:auto;display:flex;flex-direction:column;gap:12px}
+  .note{background:#fff8d1;color:#2b2b2b;border:1px solid #f0d37a;border-radius:12px;padding:10px 12px 12px;box-shadow:0 6px 12px rgba(0,0,0,.25);transform:rotate(-0.6deg)}
+  .note:nth-child(2n){background:#e6fff1;border-color:#aaf0c7;transform:rotate(0.8deg)}
+  .note:nth-child(3n){background:#eaf1ff;border-color:#b9c8ff;transform:rotate(-0.3deg)}
+  .note h3{margin:0 0 6px;font-size:14px} .note ul{margin:0;padding-left:16px;font-size:13px;line-height:1.45}
+</style></head><body><div class="page">
+<header><h1>Domain 3 — Continuous Improvement</h1><div class="subtitle">Exam-style questions (untouched) + 🎯 answer, 🔑 keywords, ⛔ eliminations, 🧠 analogy • Sticky-note tips on the sides</div></header>
+<nav class="card"><div class="qid">Jump to question</div><ul class="index">
+<li><a href="#q1">Q1</a></li><li><a href="#q2">Q2</a></li><li><a href="#q3">Q3</a></li><li><a href="#q4">Q4</a></li><li><a href="#q5">Q5</a></li></ul></nav><main class="content"><section id="q1" class="card"><div class="qblock"><b>Q1</b>
+A company that provides image storage services wants to deploy a customer-facing solution 
+to AWS. Millions of individual customers will use the solution. The solution will receive 
+batches of large image files, resize the files, and store the files in an Amazon S3 bucket for 
+up to 6 months. 
+ 
+The solution must handle significant variance in demand. The solution must also be reliable 
+at enterprise scale and have the ability to rerun processing jobs in the event of failure. 
+ 
+Which solution will meet these requirements MOST cost-effectively?
+
+A. Use AWS Step Functions to process the S3 event that occurs when a user stores an 
+image. Run an AWS Lambda function that resizes the image in place and replaces the 
+original file in the S3 bucket. Create an S3 Lifecycle expiration policy to expire all stored 
+images after 6 months. 
+B. Use Amazon EventBridge to process the S3 event that occurs when a user uploads an 
+image. Run an AWS Lambda function that resizes the image in place and replaces the 
+original file in the S3 bucket. Create an S3 Lifecycle expiration policy to expire all stored 
+images after 6 months. 
+C. Use S3 Event Notifications to invoke an AWS Lambda function when a user stores an 
+image. Use the Lambda function to resize the image in place and to store the original file in 
+the S3 bucket. Create an S3 Lifecycle policy to move all stored images to S3 Standard-
+Infrequent Access (S3 Standard-IA) after 6 months. 
+D. Use Amazon Simple Queue Service (Amazon SQS) to process the S3 event that occurs 
+when a user stores an image. Run an AWS Lambda function that resizes the image and 
+stores the resized file in an S3 bucket that uses S3 Standard-Infrequent Access (S3 
+Standard-IA). Create an S3 Lifecycle policy to move all stored images to S3 Glacier Deep 
+Archive after 6 months. 
+ 
+Answer(s): D 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> eventbridge, lambda, sqs</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q2" class="card"><div class="qblock"><b>Q2</b>
+A solutions architect works for a government agency that has strict disaster recovery 
+requirements. All Amazon Elastic Block Store (Amazon EBS) snapshots are required to be 
+saved in at least two additional AWS Regions. The agency also is required to maintain the 
+lowest possible operational overhead. 
+ 
+Which solution meets these requirements?
+
+A. Configure a policy in Amazon Data Lifecycle Manager (Amazon DLM) to run once daily to 
+copy the EBS snapshots to the additional Regions. 
+B. Use Amazon EventBridge to schedule an AWS Lambda function to copy the EBS 
+snapshots to the additional Regions. 
+C. Setup AWS Backup to create the EBS snapshots. Configure Amazon S3 Cross-Region 
+Replication to copy the EBS snapshots to the additional Regions. 
+D. Schedule Amazon EC2 Image Builder to run once daily to create an AMI and copy the 
+AMI to the additional Regions. 
+SAP-C02 
+ 
+ 
+192 
+https://Xcerts.com 
+ 
+Answer(s): A 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> eventbridge, lambda</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q3" class="card"><div class="qblock"><b>Q3</b>
+A solutions architect needs to implement a client-side encryption mechanism for objects that 
+will be stored in a new Amazon S3 bucket. The solutions architect created a CMK that is 
+stored in AWS Key Management Service (AWS KMS) for this purpose. 
+ 
+The solutions architect created the following IAM policy and attached it to an IAM role: 
+ 
+ 
+During tests, the solutions architect was able to successfully get existing test objects in the 
+S3 bucket. However, attempts to upload a new object resulted in an error message. The 
+error message stated that the action was forbidden. 
+ 
+Which action must the solutions architect add to the IAM policy to meet all the requirements? 
+ 
+SAP-C02 
+ 
+ 
+56 
+https://Xcerts.com
+
+A. kms:GenerateDataKey 
+B. kms:GetKeyPolicy 
+C. kms:GetPublicKey 
+D. kms:Sign 
+ 
+Answer(s): A 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> kms</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q4" class="card"><div class="qblock"><b>Q4</b>
+A company uses Amazon S3 to store files and images in a variety of storage classes. The 
+company's S3 costs have increased substantially during the past year. 
+ 
+A solutions architect needs to review data trends for the past 12 months and identity the 
+appropriate storage class for the objects. 
+ 
+Which solution will meet these requirements?
+
+A. Download AWS Cost and Usage Reports for the last 12 months of S3 usage. Review 
+AWS Trusted Advisor recommendations for cost savings. 
+B. Use S3 storage class analysis. Import data trends into an Amazon QuickSight dashboard 
+to analyze storage trends. 
+C. Use Amazon S3 Storage Lens. Upgrade the default dashboard to include advanced 
+metrics for storage trends. 
+D. Use Access Analyzer for S3. Download the Access Analyzer for S3 report for the last 12 
+months. Import the .csv file to an Amazon QuickSight dashboard. 
+ 
+Answer(s): C 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> managed service, least-ops, security boundary</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q5" class="card"><div class="qblock"><b>Q5</b>
+A company has a latency-sensitive trading platform that uses Amazon DynamoDB as a 
+storage backend. The company configured the DynamoDB table to use on-demand capacity 
+mode. A solutions architect needs to design a solution to improve the performance of the 
+trading platform. The new solution must ensure high availability for the trading platform. 
+ 
+Which solution will meet these requirements with the LEAST latency?
+
+A. Create a two-node DynamoDB Accelerator (DAX) cluster. Configure an application to 
+read and write data by using DAX. 
+B. Create a three-node DynamoDB Accelerator (DAX) cluster. Configure an application to 
+read data by using DAX and to write data directly to the DynamoDB table. 
+C. Create a three-node DynamoDB Accelerator (DAX) cluster. Configure an application to 
+read data directly from the DynamoDB table and to write data by using DAX. 
+D. Create a single-node DynamoDB Accelerator (DAX) cluster. Configure an application to 
+read data by using DAX and to write data directly to the DynamoDB table. 
+ 
+Answer(s): B 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> dynamodb</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section></main><aside><div class="note"><h3>📊 Observability</h3><ul><li>CloudWatch Logs + Metrics + Alarms</li><li>X-Ray traces for latency</li><li>Central logs ➜ S3 + Athena</li></ul></div><div class="note"><h3>💸 Cost Wins</h3><ul><li>Gateway EP for S3 to cut NAT $</li><li>Right-size RDS/EC2; Savings Plans</li><li>Lifecycle to Glacier; S3 IA tiers</li></ul></div><div class="note"><h3>🧯 Resilience</h3><ul><li>Multi-AZ DB; health checks</li><li>Backups + PITR; DR runbooks</li><li>Timeouts, retries, DLQs</li></ul></div></aside></div></body></html>

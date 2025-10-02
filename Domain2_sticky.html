@@ -1,0 +1,142 @@
+
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Domain 2 — New Solutions</title>
+<style>
+  :root {--bg:#0b1220;--fg:#e8ecf1;--muted:#97a3b6;--card:#0f1629;--border:#1d263d;}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji";}
+  .page{display:grid;grid-template-columns:260px minmax(680px,1fr) 300px;gap:16px;padding:20px 24px;}
+  @media(max-width:1200px){.page{grid-template-columns:1fr;}aside,nav{position:static;order:-1;}}
+  header{grid-column:1 / -1;margin-bottom:6px;}
+  h1{margin:6px 0 2px;font-size:22px;letter-spacing:.3px;}
+  .subtitle{color:var(--muted);font-size:13px;}
+  .content{display:flex;flex-direction:column;gap:16px;}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px 16px;}
+  .qblock{white-space:pre-wrap;background:#0c1426;border:1px solid #1b2440;border-radius:12px;padding:12px 14px;}
+  .row{margin-top:10px} .ans{color:#34d399;font-weight:700} .keys{color:#60a5fa} .elim{color:#fb7185;font-weight:700} .analogy{color:#c084fc;font-style:italic}
+  .hr{height:1px;background:#1d263d;margin:10px 0;}
+  nav{position:sticky;top:12px;align-self:start;max-height:calc(100vh - 24px);overflow:auto}
+  .index{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px} .index a{color:#9fb4ff;text-decoration:none;font-size:13px} .index a:hover{text-decoration:underline}
+  .qid{color:#9fb4ff;font-weight:600;margin-bottom:6px}
+  aside{position:sticky;top:12px;align-self:start;max-height:calc(100vh - 24px);overflow:auto;display:flex;flex-direction:column;gap:12px}
+  .note{background:#fff8d1;color:#2b2b2b;border:1px solid #f0d37a;border-radius:12px;padding:10px 12px 12px;box-shadow:0 6px 12px rgba(0,0,0,.25);transform:rotate(-0.6deg)}
+  .note:nth-child(2n){background:#e6fff1;border-color:#aaf0c7;transform:rotate(0.8deg)}
+  .note:nth-child(3n){background:#eaf1ff;border-color:#b9c8ff;transform:rotate(-0.3deg)}
+  .note h3{margin:0 0 6px;font-size:14px} .note ul{margin:0;padding-left:16px;font-size:13px;line-height:1.45}
+</style></head><body><div class="page">
+<header><h1>Domain 2 — New Solutions</h1><div class="subtitle">Exam-style questions (untouched) + 🎯 answer, 🔑 keywords, ⛔ eliminations, 🧠 analogy • Sticky-note tips on the sides</div></header>
+<nav class="card"><div class="qid">Jump to question</div><ul class="index">
+<li><a href="#q1">Q1</a></li><li><a href="#q2">Q2</a></li><li><a href="#q3">Q3</a></li><li><a href="#q4">Q4</a></li></ul></nav><main class="content"><section id="q1" class="card"><div class="qblock"><b>Q1</b>
+A company has Linux-based Amazon EC2 instances. Users must access the instances by 
+using SSH with EC2 SSH key pairs. Each machine requires a unique EC2 key pair. 
+ 
+The company wants to implement a key rotation policy that will, upon request, automatically 
+rotate all the EC2 key pairs and keep the keys in a securely encrypted place. The company 
+will accept less than 1 minute of downtime during key rotation. 
+ 
+Which solution will meet these requirements? 
+SAP-C02 
+ 
+ 
+117 
+https://Xcerts.com
+
+A. Store all the keys in AWS Secrets Manager. Define a Secrets Manager rotation schedule 
+to invoke an AWS Lambda function to generate new key pairs. Replace public keys on EC2 
+instances. Update the private keys in Secrets Manager. 
+B. Store all the keys in Parameter Store, a capability of AWS Systems Manager, as a string. 
+Define a Systems Manager maintenance window to invoke an AWS Lambda function to 
+generate new key pairs. Replace public keys on EC2 instances. Update the private keys in 
+Parameter Store. 
+C. Import the EC2 key pairs into AWS Key Management Service (AWS KMS). Configure 
+automatic key rotation for these key pairs. Create an Amazon EventBridge scheduled rule to 
+invoke an AWS Lambda function to initiate the key rotation in AWS KMS. 
+D. Add all the EC2 instances to Fleet Manager, a capability of AWS Systems Manager. 
+Define a Systems Manager maintenance window to issue a Systems Manager Run 
+Command document to generate new key pairs and to rotate public keys to all the instances 
+in Fleet Manager. 
+ 
+Answer(s): A 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> eventbridge, kms, lambda, ram</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q2" class="card"><div class="qblock"><b>Q2</b>
+A health insurance company stores personally identifiable information (PII) in an Amazon S3 
+bucket. The company uses server-side encryption with S3 managed encryption keys (SSE-
+S3) to encrypt the objects. According to a new requirement, all current and future objects in 
+the S3 bucket must be encrypted by keys that the company’s security team manages. The 
+S3 bucket does not have versioning enabled. 
+ 
+Which solution will meet these requirements?
+
+A. In the S3 bucket properties, change the default encryption to SSE-S3 with a customer 
+managed key. Use the AWS CLI to re-upload all objects in the S3 bucket. Set an S3 bucket 
+policy to deny unencrypted PutObject requests. 
+B. In the S3 bucket properties, change the default encryption to server-side encryption with 
+AWS KMS managed encryption keys (SSE-KMS). Set an S3 bucket policy to deny 
+unencrypted PutObject requests. Use the AWS CLI to re-upload all objects in the S3 bucket. 
+C. In the S3 bucket properties, change the default encryption to server-side encryption with 
+AWS KMS managed encryption keys (SSE-KMS). Set an S3 bucket policy to automatically 
+encrypt objects on GetObject and PutObject requests. 
+D. In the S3 bucket properties, change the default encryption to AES-256 with a customer 
+managed key. Attach a policy to deny unencrypted PutObject requests to any entities that 
+access the S3 bucket. Use the AWS CLI to re-upload all objects in the S3 bucket. 
+ 
+Answer(s): D 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> kms</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q3" class="card"><div class="qblock"><b>Q3</b>
+A company has a monolithic application that is critical to the company’s business. The 
+company hosts the application on an Amazon EC2 instance that runs Amazon Linux 2. The 
+company’s application team receives a directive from the legal department to back up the 
+data from the instance’s encrypted Amazon Elastic Block Store (Amazon EBS) volume to an 
+Amazon S3 bucket. The application team does not have the administrative SSH key pair for 
+the instance. The application must continue to serve the users. 
+ 
+Which solution will meet these requirements?
+
+A. Attach a role to the instance with permission to write to Amazon S3. Use the AWS 
+Systems Manager Session Manager option to gain access to the instance and run 
+commands to copy data into Amazon S3. 
+B. Create an image of the instance with the reboot option turned on. Launch a new EC2 
+instance from the image. Attach a role to the new instance with permission to write to 
+Amazon S3. Run a command to copy data into Amazon S3. 
+C. Take a snapshot of the EBS volume by using Amazon Data Lifecycle Manager (Amazon 
+DLM). Copy the data to Amazon S3. 
+D. Create an image of the instance. Launch a new EC2 instance from the image. Attach a 
+role to the new instance with permission to write to Amazon S3. Run a command to copy 
+data into Amazon S3. 
+SAP-C02 
+ 
+ 
+36 
+https://Xcerts.com 
+ 
+Answer(s): A 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> managed service, least-ops, security boundary</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q4" class="card"><div class="qblock"><b>Q4</b>
+A company is rearchitecting its applications to run on AWS. The company’s infrastructure 
+includes multiple Amazon EC2 instances. The company's development team needs different 
+levels of access. The company wants to implement a policy that requires all Windows EC2 
+instances to be joined to an Active Directory domain on AWS. The company also wants to 
+implement enhanced security processes such as multi-factor authentication (MFA). The 
+company wants to use managed AWS services wherever possible. 
+ 
+Which solution will meet these requirements? 
+ 
+SAP-C02 
+ 
+ 
+179 
+https://Xcerts.com
+
+A. Create an AWS Directory Service for Microsoft Active Directory implementation. Launch 
+an Amazon Workspace. Connect to and use the Workspace for domain security 
+configuration tasks. 
+B. Create an AWS Directory Service for Microsoft Active Directory implementation. Launch 
+an EC2 instance. Connect to and use the EC2 instance for domain security configuration 
+tasks. 
+C. Create an AWS Directory Service Simple AD implementation. Launch an EC2 instance. 
+Connect to and use the EC2 instance for domain security configuration tasks. 
+D. Create an AWS Directory Service Simple AD implementation. Launch an Amazon 
+Workspace. Connect to and use the Workspace for domain security configuration tasks. 
+ 
+Answer(s): B 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> managed service, least-ops, security boundary</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section></main><aside><div class="note"><h3>📐 New Solutions</h3><ul><li>Stateless ➜ ALB/NLB + ASG/Serverless</li><li>Event-driven ➜ SQS/SNS/EventBridge</li><li>Content + TLS ➜ CloudFront + ACM</li><li>Caching ➜ ElastiCache/DAX</li></ul></div><div class="note"><h3>🧱 Storage picks</h3><ul><li>Objects ➜ S3 (lifecycle, Glacier)</li><li>Block ➜ EBS; Shared POSIX ➜ EFS</li><li>HPC burst ➜ FSx for Lustre + S3</li><li>Search ➜ OpenSearch</li></ul></div><div class="note"><h3>🔐 Security</h3><ul><li>KMS CMKs per app; use grants</li><li>WAF vs Shield scope</li><li>Secrets Manager vs Param Store</li></ul></div></aside></div></body></html>

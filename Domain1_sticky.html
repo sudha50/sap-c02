@@ -1,0 +1,721 @@
+
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Domain 1 — Organizational Complexity</title>
+<style>
+  :root {--bg:#0b1220;--fg:#e8ecf1;--muted:#97a3b6;--card:#0f1629;--border:#1d263d;}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji";}
+  .page{display:grid;grid-template-columns:260px minmax(680px,1fr) 300px;gap:16px;padding:20px 24px;}
+  @media(max-width:1200px){.page{grid-template-columns:1fr;}aside,nav{position:static;order:-1;}}
+  header{grid-column:1 / -1;margin-bottom:6px;}
+  h1{margin:6px 0 2px;font-size:22px;letter-spacing:.3px;}
+  .subtitle{color:var(--muted);font-size:13px;}
+  .content{display:flex;flex-direction:column;gap:16px;}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px 16px;}
+  .qblock{white-space:pre-wrap;background:#0c1426;border:1px solid #1b2440;border-radius:12px;padding:12px 14px;}
+  .row{margin-top:10px} .ans{color:#34d399;font-weight:700} .keys{color:#60a5fa} .elim{color:#fb7185;font-weight:700} .analogy{color:#c084fc;font-style:italic}
+  .hr{height:1px;background:#1d263d;margin:10px 0;}
+  nav{position:sticky;top:12px;align-self:start;max-height:calc(100vh - 24px);overflow:auto}
+  .index{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px} .index a{color:#9fb4ff;text-decoration:none;font-size:13px} .index a:hover{text-decoration:underline}
+  .qid{color:#9fb4ff;font-weight:600;margin-bottom:6px}
+  aside{position:sticky;top:12px;align-self:start;max-height:calc(100vh - 24px);overflow:auto;display:flex;flex-direction:column;gap:12px}
+  .note{background:#fff8d1;color:#2b2b2b;border:1px solid #f0d37a;border-radius:12px;padding:10px 12px 12px;box-shadow:0 6px 12px rgba(0,0,0,.25);transform:rotate(-0.6deg)}
+  .note:nth-child(2n){background:#e6fff1;border-color:#aaf0c7;transform:rotate(0.8deg)}
+  .note:nth-child(3n){background:#eaf1ff;border-color:#b9c8ff;transform:rotate(-0.3deg)}
+  .note h3{margin:0 0 6px;font-size:14px} .note ul{margin:0;padding-left:16px;font-size:13px;line-height:1.45}
+</style></head><body><div class="page">
+<header><h1>Domain 1 — Organizational Complexity</h1><div class="subtitle">Exam-style questions (untouched) + 🎯 answer, 🔑 keywords, ⛔ eliminations, 🧠 analogy • Sticky-note tips on the sides</div></header>
+<nav class="card"><div class="qid">Jump to question</div><ul class="index">
+<li><a href="#q1">Q1</a></li><li><a href="#q2">Q2</a></li><li><a href="#q3">Q3</a></li><li><a href="#q4">Q4</a></li><li><a href="#q5">Q5</a></li><li><a href="#q6">Q6</a></li><li><a href="#q7">Q7</a></li><li><a href="#q8">Q8</a></li><li><a href="#q9">Q9</a></li><li><a href="#q10">Q10</a></li><li><a href="#q11">Q11</a></li><li><a href="#q12">Q12</a></li><li><a href="#q13">Q13</a></li><li><a href="#q14">Q14</a></li><li><a href="#q15">Q15</a></li><li><a href="#q16">Q16</a></li><li><a href="#q17">Q17</a></li><li><a href="#q18">Q18</a></li><li><a href="#q19">Q19</a></li><li><a href="#q20">Q20</a></li></ul></nav><main class="content"><section id="q1" class="card"><div class="qblock"><b>Q1</b>
+A company has hundreds of AWS accounts. The company uses an organization in AWS 
+Organizations to manage all the accounts. The company has turned on all features. 
+ 
+A finance team has allocated a daily budget for AWS costs. The finance team must receive 
+an email notification if the organization's AWS costs exceed 80% of the allocated budget. A 
+solutions architect needs to implement a solution to track the costs and deliver the 
+notifications. 
+ 
+Which solution will meet these requirements?
+
+A. In the organization's management account, use AWS Budgets to create a budget that has 
+a daily period. Add an alert threshold and set the value to 80%. Use Amazon Simple 
+Notification Service (Amazon SNS) to notify the finance team. 
+B. In the organization’s management account, set up the organizational view feature for 
+AWS Trusted Advisor. Create an organizational view report for cost optimization. Set an alert 
+threshold of 80%. Configure notification preferences. Add the email addresses of the finance 
+team. 
+C. Register the organization with AWS Control Tower. Activate the optional cost control 
+(guardrail). Set a control (guardrail) parameter of 80%. Configure control (guardrail) 
+notification preferences. Use Amazon Simple Notification Service (Amazon SNS) to notify 
+the finance team. 
+D. Configure the member accounts to save a daily AWS Cost and Usage Report to an 
+Amazon S3 bucket in the organization's management account. Use Amazon EventBridge to 
+schedule a daily Amazon Athena query to calculate the organization’s costs. Configure 
+Athena to send an Amazon CloudWatch alert if the total costs are more than 80% of the 
+allocated budget. Use Amazon Simple Notification Service (Amazon SNS) to notify the 
+finance team. 
+ 
+Answer(s): A 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> control tower, eventbridge, organizations, ou, ram, sns</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q2" class="card"><div class="qblock"><b>Q2</b>
+A company is building an image service on the web that will allow users to upload and 
+search random photos. At peak usage, up to 10,000 users worldwide will upload their 
+images. The will then overlay text on the uploaded images, which will then be published on 
+the company website. 
+ 
+Which design should a solutions architect implement?
+
+A. Store the uploaded images in Amazon Elastic File System (Amazon EFS). Send 
+application log information about each image to Amazon CloudWatch Logs. Create a fleet of 
+Amazon EC2 instances that use CloudWatch Logs to determine which images need to be 
+processed. Place processed images in another directory in Amazon EFS. Enable Amazon 
+CloudFront and configure the origin to be the one of the EC2 instances in the fleet. 
+B. Store the uploaded images in an Amazon S3 bucket and configure an S3 bucket event 
+notification to send a message to Amazon Simple Notification Service (Amazon SNS). 
+Create a fleet of Amazon EC2 instances behind an Application Load Balancer (ALB) to pull 
+messages from Amazon SNS to process the images and place them in Amazon Elastic File 
+System (Amazon EFS). Use Amazon CloudWatch metrics for the SNS message volume to 
+scale out EC2 instances. Enable Amazon CloudFront and configure the origin to be the ALB 
+in front of the EC2 instances. 
+C. Store the uploaded images in an Amazon S3 bucket and configure an S3 bucket event 
+notification to send a message to the Amazon Simple Queue Service (Amazon SQS) queue. 
+Create a fleet of Amazon EC2 instances to pull messages from the SQS queue to process 
+the images and place them in another S3 bucket. Use Amazon CloudWatch metrics for 
+queue depth to scale out EC2 instances. Enable Amazon CloudFront and configure the 
+origin to be the S3 bucket that contains the processed images. 
+D. Store the uploaded images on a shared Amazon Elastic Block Store (Amazon EBS) 
+volume mounted to a fleet of Amazon EC2 Spot instances. Create an Amazon DynamoDB 
+table that contains information about each uploaded image and whether it has been 
+processed. Use an Amazon EventBridge rule to scale out EC2 instances. Enable Amazon 
+CloudFront and configure the origin to reference an Elastic Load Balancer in front of the fleet 
+of EC2 instances. 
+ 
+Answer(s): C 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> alb, cloudfront, dynamodb, eventbridge, ou, sns, sqs</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q3" class="card"><div class="qblock"><b>Q3</b>
+A company wants to deploy an AWS WAF solution to manage AWS WAF rules across 
+multiple AWS accounts. The accounts are managed under different OUs in AWS 
+Organizations. 
+ 
+Administrators must be able to add or remove accounts or OUs from managed AWS WAF 
+rule sets as needed. Administrators also must have the ability to automatically update and 
+remediate noncompliant AWS WAF rules in all accounts. 
+SAP-C02 
+ 
+ 
+63 
+https://Xcerts.com 
+ 
+Which solution meets these requirements with the LEAST amount of operational overhead?
+
+A. Use AWS Firewall Manager to manage AWS WAF rules across accounts in the 
+organization. Use an AWS Systems Manager Parameter Store parameter to store account 
+numbers and OUs to manage. Update the parameter as needed to add or remove accounts 
+or OUs. Use an Amazon EventBridge rule to identify any changes to the parameter and to 
+invoke an AWS Lambda function to update the security policy in the Firewall Manager 
+administrative account. 
+B. Deploy an organization-wide AWS Config rule that requires all resources in the selected 
+OUs to associate the AWS WAF rules. Deploy automated remediation actions by using AWS 
+Lambda to fix noncompliant resources. Deploy AWS WAF rules by using an AWS 
+CloudFormation stack set to target the same OUs where the AWS Config rule is applied. 
+C. Create AWS WAF rules in the management account of the organization. Use AWS 
+Lambda environment variables to store account numbers and OUs to manage. Update 
+environment variables as needed to add or remove accounts or OUs. Create cross-account 
+IAM roles in member accounts. Assume the roles by using AWS Security Token Service 
+(AWS STS) in the Lambda function to create and update AWS WAF rules in the member 
+accounts. 
+D. Use AWS Control Tower to manage AWS WAF rules across accounts in the organization. 
+Use AWS Key Management Service (AWS KMS) to store account numbers and OUs to 
+manage. Update AWS KMS as needed to add or remove accounts or OUs. Create IAM 
+users in member accounts. Allow AWS Control Tower in the management account to use 
+the access key and secret access key to create and update AWS WAF rules in the member 
+accounts. 
+ 
+Answer(s): A 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> control tower, eventbridge, kms, lambda, organizations, ou, ram, sso, waf</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q4" class="card"><div class="qblock"><b>Q4</b>
+SAP-C02 
+ 
+ 
+217 
+https://Xcerts.com 
+A company owns a chain of travel agencies and is running an application in the AWS Cloud. 
+Company employees use the application to search for information about travel destinations. 
+Destination content is updated four times each year. 
+ 
+Two fixed Amazon EC2 instances serve the application. The company uses an Amazon 
+Route 53 public hosted zone with a multivalue record of travel.example.com that returns the 
+Elastic IP addresses for the EC2 instances. The application uses Amazon DynamoDB as its 
+primary data store. The company uses a self-hosted Redis instance as a caching solution. 
+ 
+During content updates, the load on the EC2 instances and the caching solution increases 
+drastically. This increased load has led to downtime on several occasions. A solutions 
+architect must update the application so that the application is highly available and can 
+handle the load that is generated by the content updates. 
+ 
+Which solution will meet these requirements?
+
+A. Set up DynamoDB Accelerator (DAX) as in-memory cache. Update the application to use 
+DAX. Create an Auto Scaling group for the EC2 instances. Create an Application Load 
+Balancer (ALB). Set the Auto Scaling group as a target for the ALB. Update the Route 53 
+record to use a simple routing policy that targets the ALB's DNS alias. Configure scheduled 
+scaling for the EC2 instances before the content updates. 
+B. Set up Amazon ElastiCache for Redis. Update the application to use ElastiCache. Create 
+an Auto Scaling group for the EC2 instances. Create an Amazon CloudFront distribution, 
+and set the Auto Scaling group as an origin for the distribution. Update the Route 53 record 
+to use a simple routing policy that targets the CloudFront distribution’s DNS alias. Manually 
+scale up EC2 instances before the content updates. 
+C. Set up Amazon ElastiCache for Memcached. Update the application to use ElastiCache. 
+Create an Auto Scaling group for the EC2 instances. Create an Application Load Balancer 
+(ALB). Set the Auto Scaling group as a target for the ALB. Update the Route 53 record to 
+use a simple routing policy that targets the ALB's DNS alias. Configure scheduled scaling for 
+the application before the content updates. 
+D. Set up DynamoDB Accelerator (DAX) as in-memory cache. Update the application to use 
+DAX. Create an Auto Scaling group for the EC2 instances. Create an Amazon CloudFront 
+distribution, and set the Auto Scaling group as an origin for the distribution. Update the 
+Route 53 record to use a simple routing policy that targets the CloudFront distribution's DNS 
+alias. Manually scale up EC2 instances before the content updates. 
+ 
+Answer(s): A 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> alb, cloudfront, dynamodb, elasticache, ou, route 53</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q5" class="card"><div class="qblock"><b>Q5</b>
+A company has a multi-tier web application that runs on a fleet of Amazon EC2 instances 
+behind an Application Load Balancer (ALB). The instances are in an Auto Scaling group. 
+The ALB and the Auto Scaling group are replicated in a backup AWS Region. The minimum 
+value and the maximum value for the Auto Scaling group are set to zero. An Amazon RDS 
+Multi-AZ DB instance stores the application’s data. The DB instance has a read replica in the 
+SAP-C02 
+ 
+ 
+7 
+https://Xcerts.com 
+backup Region. The application presents an endpoint to end users by using an Amazon 
+Route 53 record. 
+ 
+The company needs to reduce its RTO to less than 15 minutes by giving the application the 
+ability to automatically fail over to the backup Region. The company does not have a large 
+enough budget for an active-active strategy. 
+ 
+What should a solutions architect recommend to meet these requirements?
+
+A. Reconfigure the application’s Route 53 record with a latency-based routing policy that 
+load balances traffic between the two ALBs. Create an AWS Lambda function in the backup 
+Region to promote the read replica and modify the Auto Scaling group values. Create an 
+Amazon CloudWatch alarm that is based on the HTTPCode_Target_5XX_Count metric for 
+the ALB in the primary Region. Configure the CloudWatch alarm to invoke the Lambda 
+function. 
+B. Create an AWS Lambda function in the backup Region to promote the read replica and 
+modify the Auto Scaling group values. Configure Route 53 with a health check that monitors 
+the web application and sends an Amazon Simple Notification Service (Amazon SNS) 
+notification to the Lambda function when the health check status is unhealthy. Update the 
+application’s Route 53 record with a failover policy that routes traffic to the ALB in the 
+backup Region when a health check failure occurs. 
+C. Configure the Auto Scaling group in the backup Region to have the same values as the 
+Auto Scaling group in the primary Region. Reconfigure the application’s Route 53 record 
+with a latency-based routing policy that load balances traffic between the two ALBs. Remove 
+the read replica. Replace the read replica with a standalone RDS DB instance. Configure 
+Cross-Region Replication between the RDS DB instances by using snapshots and Amazon 
+S3. 
+D. Configure an endpoint in AWS Global Accelerator with the two ALBs as equal weighted 
+targets. Create an AWS Lambda function in the backup Region to promote the read replica 
+and modify the Auto Scaling group values. Create an Amazon CloudWatch alarm that is 
+based on the HTTPCode_Target_5XX_Count metric for the ALB in the primary Region. 
+Configure the CloudWatch alarm to invoke the Lambda function. 
+ 
+Answer(s): B 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> alb, lambda, ou, rds, route 53, sns</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q6" class="card"><div class="qblock"><b>Q6</b>
+A retail company is operating its ecommerce application on AWS. The application runs on 
+Amazon EC2 instances behind an Application Load Balancer (ALB). The company uses an 
+Amazon RDS DB instance as the database backend. Amazon CloudFront is configured with 
+one origin that points to the ALB. Static content is cached. Amazon Route 53 is used to host 
+all public zones. 
+ 
+After an update of the application, the ALB occasionally returns a 502 status code (Bad 
+Gateway) error. The root cause is malformed HTTP headers that are returned to the ALB. 
+The webpage returns successfully when a solutions architect reloads the webpage 
+immediately after the error occurs. 
+ 
+While the company is working on the problem, the solutions architect needs to provide a 
+custom error page instead of the standard ALB error page to visitors. 
+ 
+Which combination of steps will meet this requirement with the LEAST amount of operational 
+overhead? (Choose two.)
+
+A. Create an Amazon S3 bucket. Configure the S3 bucket to host a static webpage. Upload 
+the custom error pages to Amazon S3. 
+B. Create an Amazon CloudWatch alarm to invoke an AWS Lambda function if the ALB 
+health check response Target.FailedHealthChecks is greater than 0. Configure the Lambda 
+function to modify the forwarding rule at the ALB to point to a publicly accessible web server. 
+C. Modify the existing Amazon Route 53 records by adding health checks. Configure a 
+fallback target if the health check fails. Modify DNS records to point to a publicly accessible 
+webpage. 
+D. Create an Amazon CloudWatch alarm to invoke an AWS Lambda function if the ALB 
+health check response Elb.InternalError is greater than 0. Configure the Lambda function to 
+modify the forwarding rule at the ALB to point to a public accessible web server. 
+E. Add a custom error response by configuring a CloudFront custom error page. Modify DNS 
+records to point to a publicly accessible web page. 
+ 
+Answer(s): A, E 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> A,</div><div class="row keys">🔑 <b>Keywords:</b> alb, cloudfront, lambda, ou, rds, route 53</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q7" class="card"><div class="qblock"><b>Q7</b>
+A company runs a new application as a static website in Amazon S3. The company has 
+deployed the application to a production AWS account and uses Amazon CloudFront to 
+deliver the website. The website calls an Amazon API Gateway REST API. An AWS Lambda 
+function backs each API method. 
+ 
+The company wants to create a CSV report every 2 weeks to show each API Lambda 
+function’s recommended configured memory, recommended cost, and the price difference 
+between current configurations and the recommendations. The company will store the 
+reports in an S3 bucket. 
+ 
+Which solution will meet these requirements with the LEAST development time?
+
+A. Create a Lambda function that extracts metrics data for each API Lambda function from 
+Amazon CloudWatch Logs for the 2-week period. Collate the data into tabular format. Store 
+the data as a .csv file in an S3 bucket. Create an Amazon EventBridge rule to schedule the 
+Lambda function to run every 2 weeks. 
+B. Opt in to AWS Compute Optimizer. Create a Lambda function that calls the 
+ExportLambdaFunctionRecommendations operation. Export the .csv file to an S3 bucket. 
+Create an Amazon EventBridge rule to schedule the Lambda function to run every 2 weeks. 
+C. Opt in to AWS Compute Optimizer. Set up enhanced infrastructure metrics. Within the 
+Compute Optimizer console, schedule a job to export the Lambda recommendations to a 
+.csv file. Store the file in an S3 bucket every 2 weeks. 
+D. Purchase the AWS Business Support plan for the production account. Opt in to AWS 
+Compute Optimizer for AWS Trusted Advisor checks. In the Trusted Advisor console, 
+schedule a job to export the cost optimization checks to a .csv file. Store the file in an S3 
+bucket every 2 weeks. 
+ 
+Answer(s): B 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> api gateway, cloudfront, eventbridge, lambda, ou</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q8" class="card"><div class="qblock"><b>Q8</b>
+A company is building an electronic document management system in which users upload 
+their documents. The application stack is entirely serverless and runs on AWS in the eu-
+central-1 Region. The system includes a web application that uses an Amazon CloudFront 
+distribution for delivery with Amazon S3 as the origin. The web application communicates 
+with Amazon API Gateway Regional endpoints. The API Gateway APIs call AWS Lambda 
+functions that store metadata in an Amazon Aurora Serverless database and put the 
+documents into an S3 bucket. 
+The company is growing steadily and has completed a proof of concept with its largest 
+customer. The company must improve latency outside of Europe. 
+ 
+Which combination of actions will meet these requirements? (Choose two.)
+
+A. Enable S3 Transfer Acceleration on the S3 bucket. Ensure that the web application uses 
+the Transfer Acceleration signed URLs. 
+B. Create an accelerator in AWS Global Accelerator. Attach the accelerator to the 
+CloudFront distribution. 
+C. Change the API Gateway Regional endpoints to edge-optimized endpoints. 
+D. Provision the entire stack in two other locations that are spread across the world. Use 
+global databases on the Aurora Serverless cluster. 
+SAP-C02 
+ 
+ 
+48 
+https://Xcerts.com 
+E. Add an Amazon RDS proxy between the Lambda functions and the Aurora Serverless 
+database. 
+ 
+Answer(s): A, C 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> A,C</div><div class="row keys">🔑 <b>Keywords:</b> api gateway, aurora, cloudfront, lambda, ou, rds</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q9" class="card"><div class="qblock"><b>Q9</b>
+A company uses AWS Organizations for a multi-account setup in the AWS Cloud. The 
+company uses AWS Control Tower for governance and uses AWS Transit Gateway for VPC 
+connectivity across accounts. 
+ 
+In an AWS application account, the company’s application team has deployed a web 
+application that uses AWS Lambda and Amazon RDS. The company's database 
+administrators have a separate DBA account and use the account to centrally manage all 
+the databases across the organization. The database administrators use an Amazon EC2 
+instance that is deployed in the DBA account to access an RDS database that is deployed m 
+the application account. 
+ 
+The application team has stored the database credentials as secrets in AWS Secrets 
+Manager in the application account. The application team is manually sharing the secrets 
+with the database administrators. The secrets are encrypted by the default AWS managed 
+key for Secrets Manager in the application account. A solutions architect needs to implement 
+a solution that gives the database administrators access to the database and eliminates the 
+need to manually share the secrets. 
+ 
+Which solution will meet these requirements?
+
+A. Use AWS Resource Access Manager (AWS RAM) to share the secrets from the 
+application account with the DBA account. In the DBA account, create an IAM role that is 
+named DBA-Admin. Grant the role the required permissions to access the shared secrets. 
+Attach the DBA-Admin role to the EC2 instance for access to the cross-account secrets. 
+B. In the application account, create an IAM role that is named DBA-Secret. Grant the role 
+the required permissions to access the secrets. In the DBA account, create an IAM role that 
+is named DBA-Admin. Grant the DBA-Admin role the required permissions to assume the 
+DBA-Secret role in the application account. Attach the DBA-Admin role to the EC2 instance 
+for access to the cross-account secrets. 
+C. In the DBA account create an IAM role that is named DBA-Admin. Grant the role the 
+required permissions to access the secrets and the default AWS managed key in the 
+application account. In the application account, attach resource-based policies to the key to 
+allow access from the DBA account. Attach the DBA-Admin role to the EC2 instance for 
+access to the cross-account secrets. 
+SAP-C02 
+ 
+ 
+75 
+https://Xcerts.com 
+D. In the DBA account, create an IAM role that is named DBA-Admin. Grant the role the 
+required permissions to access the secrets in the application account. Attach an SCP to the 
+application account to allow access to the secrets from the DBA account. Attach the DBA-
+Admin role to the EC2 instance for access to the cross-account secrets. 
+ 
+Answer(s): B 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> control tower, lambda, organizations, ou, ram, rds, scp, transit gateway</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Transit Gateway scales multi‑VPC/account connectivity with isolated route tables vs N×(N‑1) peering.</div><div class="hr"></div></section><section id="q10" class="card"><div class="qblock"><b>Q10</b>
+A financial services company receives a regular data feed from its credit card servicing 
+partner. Approximately 5,000 records are sent every 15 minutes in plaintext, delivered over 
+HTTPS directly into an Amazon S3 bucket with server-side encryption. This feed contains 
+sensitive credit card primary account number (PAN) data. The company needs to 
+automatically mask the PAN before sending the data to another S3 bucket for additional 
+internal processing. The company also needs to remove and merge specific fields, and then 
+transform the record into JSON format. Additionally, extra feeds are likely to be added in the 
+future, so any design needs to be easily expandable. 
+ 
+Which solutions will meet these requirements?
+
+A. Invoke an AWS Lambda function on file delivery that extracts each record and writes it to 
+an Amazon SQS queue. Invoke another Lambda function when new messages arrive in the 
+SQS queue to process the records, writing the results to a temporary location in Amazon S3. 
+Invoke a final Lambda function once the SQS queue is empty to transform the records into 
+JSON format and send the results to another S3 bucket for internal processing. 
+B. Invoke an AWS Lambda function on file delivery that extracts each record and writes it to 
+an Amazon SQS queue. Configure an AWS Fargate container application to automatically 
+scale to a single instance when the SQS queue contains messages. Have the application 
+process each record, and transform the record into JSON format. When the queue is empty, 
+send the results to another S3 bucket for internal processing and scale down the AWS 
+Fargate instance. 
+C. Create an AWS Glue crawler and custom classifier based on the data feed formats and 
+build a table definition to match. Invoke an AWS Lambda function on file delivery to start an 
+AWS Glue ETL job to transform the entire record according to the processing and 
+transformation requirements. Define the output format as JSON. Once complete, have the 
+ETL job send the results to another S3 bucket for internal processing. 
+SAP-C02 
+ 
+ 
+84 
+https://Xcerts.com 
+D. Create an AWS Glue crawler and custom classifier based upon the data feed formats and 
+build a table definition to match. Perform an Amazon Athena query on file delivery to start an 
+Amazon EMR ETL job to transform the entire record according to the processing and 
+transformation requirements. Define the output format as JSON. Once complete, send the 
+results to another S3 bucket for internal processing and scale down the EMR cluster. 
+ 
+Answer(s): C 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> lambda, ou, rds, sqs</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q11" class="card"><div class="qblock"><b>Q11</b>
+A company wants to refactor its retail ordering web application that currently has a load-
+balanced Amazon EC2 instance fleet for web hosting, database API services, and business 
+logic. The company needs to create a decoupled, scalable architecture with a mechanism for 
+retaining failed orders while also minimizing operational costs. 
+ 
+Which solution will meet these requirements?
+
+A. Use Amazon S3 for web hosting with Amazon API Gateway for database API services. 
+Use Amazon Simple Queue Service (Amazon SQS) for order queuing. Use Amazon Elastic 
+Container Service (Amazon ECS) for business logic with Amazon SQS long polling for 
+retaining failed orders. 
+B. Use AWS Elastic Beanstalk for web hosting with Amazon API Gateway for database API 
+services. Use Amazon MQ for order queuing. Use AWS Step Functions for business logic 
+with Amazon S3 Glacier Deep Archive for retaining failed orders. 
+C. Use Amazon S3 for web hosting with AWS AppSync for database API services. Use 
+Amazon Simple Queue Service (Amazon SQS) for order queuing. Use AWS Lambda for 
+business logic with an Amazon SQS dead-letter queue for retaining failed orders. 
+D. Use Amazon Lightsail for web hosting with AWS AppSync for database API services. Use 
+Amazon Simple Email Service (Amazon SES) for order queuing. Use Amazon Elastic 
+Kubernetes Service (Amazon EKS) for business logic with Amazon OpenSearch Service for 
+retaining failed orders. 
+ 
+Answer(s): C 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> api gateway, lambda, opensearch, ou, sqs</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q12" class="card"><div class="qblock"><b>Q12</b>
+A company needs to monitor a growing number of Amazon S3 buckets across two AWS 
+Regions. The company also needs to track the percentage of objects that are encrypted in 
+Amazon S3. The company needs a dashboard to display this information for internal 
+compliance teams. 
+ 
+Which solution will meet these requirements with the LEAST operational overhead?
+
+A. Create a new 3 Storage Lens dashboard in each Region to track bucket and encryption 
+metrics. Aggregate data from both Region dashboards into a single dashboard in Amazon 
+QuickSight for the compliance teams. 
+B. Deploy an AWS Lambda function in each Region to list the number of buckets and the 
+encryption status of objects. Store this data in Amazon S3. Use Amazon Athena queries to 
+display the data on a custom dashboard in Amazon QuickSight for the compliance teams. 
+C. Use the S3 Storage Lens default dashboard to track bucket and encryption metrics. Give 
+the compliance teams access to the dashboard directly in the S3 console. 
+D. Create an Amazon EventBridge rule to detect AWS CloudTrail events for S3 object 
+creation. Configure the rule to invoke an AWS Lambda function to record encryption metrics 
+in Amazon DynamoDB. Use Amazon QuickSight to display the metrics in a dashboard for 
+the compliance teams. 
+ 
+Answer(s): C 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> dynamodb, eventbridge, lambda, ou, rds</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q13" class="card"><div class="qblock"><b>Q13</b>
+A company needs to architect a hybrid DNS solution. This solution will use an Amazon 
+Route 53 private hosted zone for the domain cloud.example.com for the resources stored 
+within VPCs. 
+ 
+The company has the following DNS resolution requirements: 
+ 
+• 
+On-premises systems should be able to resolve and connect to cloud.example.com. 
+• 
+All VPCs should be able to resolve cloud.example.com. 
+ 
+There is already an AWS Direct Connect connection between the on-premises corporate 
+network and AWS Transit Gateway. 
+ 
+Which architecture should the company use to meet these requirements with the HIGHEST 
+performance?
+
+A. Associate the private hosted zone to all the VPCs. Create a Route 53 inbound resolver in 
+the shared services VPC. Attach all VPCs to the transit gateway and create forwarding rules 
+in the on-premises DNS server for cloud.example.com that point to the inbound resolver. 
+B. Associate the private hosted zone to all the VPCs. Deploy an Amazon EC2 conditional 
+forwarder in the shared services VPC. Attach all VPCs to the transit gateway and create 
+forwarding rules in the on-premises DNS server for cloud.example.com that point to the 
+conditional forwarder. 
+C. Associate the private hosted zone to the shared services VPC. Create a Route 53 
+outbound resolver in the shared services VPC. Attach all VPCs to the transit gateway and 
+create forwarding rules in the on-premises DNS server for cloud.example.com that point to 
+the outbound resolver. 
+D. Associate the private hosted zone to the shared services VPC. Create a Route 53 
+inbound resolver in the shared services VPC. Attach the shared services VPC to the transit 
+gateway and create forwarding rules in the on-premises DNS server for cloud.example.com 
+that point to the inbound resolver. 
+ 
+Answer(s): A 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> direct connect, inbound, ou, outbound, private hosted zone, resolver, route 53, sso, transit gateway</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> On‑prem must resolve PHZ records ➜ use Route 53 Inbound Resolver over DX/VPN; associate PHZ to all required VPCs.</div><div class="hr"></div></section><section id="q14" class="card"><div class="qblock"><b>Q14</b>
+A company is providing weather data over a REST-based API to several customers. The API 
+is hosted by Amazon API Gateway and is integrated with different AWS Lambda functions 
+for each API operation. The company uses Amazon Route 53 for DNS and has created a 
+resource record of weather.example.com. The company stores data for the API in Amazon 
+DynamoDB tables. The company needs a solution that will give the API the ability to fail over 
+to a different AWS Region. 
+ 
+Which solution will meet these requirements?
+
+A. Deploy a new set of Lambda functions in a new Region. Update the API Gateway API to 
+use an edge-optimized API endpoint with Lambda functions from both Regions as targets. 
+Convert the DynamoDB tables to global tables. 
+B. Deploy a new API Gateway API and Lambda functions in another Region. Change the 
+Route 53 DNS record to a multivalue answer. Add both API Gateway APIs to the answer. 
+Enable target health monitoring. Convert the DynamoDB tables to global tables. 
+SAP-C02 
+ 
+ 
+3 
+https://Xcerts.com 
+C. Deploy a new API Gateway API and Lambda functions in another Region. Change the 
+Route 53 DNS record to a failover record. Enable target health monitoring. Convert the 
+DynamoDB tables to global tables. 
+D. Deploy a new API Gateway API in a new Region. Change the Lambda functions to global 
+functions. Change the Route 53 DNS record to a multivalue answer. Add both API Gateway 
+APIs to the answer. Enable target health monitoring. Convert the DynamoDB tables to global 
+tables. 
+ 
+Answer(s): C 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> api gateway, dynamodb, global tables, lambda, ou, route 53</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Lambda is regional; 'global Lambda' does not exist.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> For multi‑Region DR, Route 53 failover + DynamoDB Global Tables keeps state in sync.</div><div class="hr"></div></section><section id="q15" class="card"><div class="qblock"><b>Q15</b>
+A security engineer determined that an existing application retrieves credentials to an 
+Amazon RDS for MySQL database from an encrypted file in Amazon S3. For the next 
+version of the application, the security engineer wants to implement the following application 
+design changes to improve security: 
+ 
+• 
+The database must use strong, randomly generated passwords stored in a secure 
+AWS managed service. 
+• 
+The application resources must be deployed through AWS CloudFormation. 
+• 
+The application must rotate credentials for the database every 90 days. 
+ 
+A solutions architect will generate a CloudFormation template to deploy the application. 
+ 
+Which resources specified in the CloudFormation template will meet the security engineer’s 
+requirements with the LEAST amount of operational overhead?
+
+A. Generate the database password as a secret resource using AWS Secrets Manager. 
+Create an AWS Lambda function resource to rotate the database password. Specify a 
+Secrets Manager RotationSchedule resource to rotate the database password every 90 
+days. 
+B. Generate the database password as a SecureString parameter type using AWS Systems 
+Manager Parameter Store. Create an AWS Lambda function resource to rotate the database 
+password. Specify a Parameter Store RotationSchedule resource to rotate the database 
+password every 90 days. 
+SAP-C02 
+ 
+ 
+18 
+https://Xcerts.com 
+C. Generate the database password as a secret resource using AWS Secrets Manager. 
+Create an AWS Lambda function resource to rotate the database password. Create an 
+Amazon EventBridge scheduled rule resource to trigger the Lambda function password 
+rotation every 90 days. 
+D. Generate the database password as a SecureString parameter type using AWS Systems 
+Manager Parameter Store. Specify an AWS AppSync DataSource resource to automatically 
+rotate the database password every 90 days. 
+ 
+Answer(s): A 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> eventbridge, lambda, ou, ram, rds</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q16" class="card"><div class="qblock"><b>Q16</b>
+A company has registered 10 new domain names. The company uses the domains for 
+online marketing. The company needs a solution that will redirect online visitors to a specific 
+URL for each domain. All domains and target URLs are defined in a JSON document. All 
+DNS records are managed by Amazon Route 53. 
+ 
+A solutions architect must implement a redirect service that accepts HTTP and HTTPS 
+requests. 
+Which combination of steps should the solutions architect take to meet these requirements 
+with the LEAST amount of operational effort? (Choose three.)
+
+A. Create a dynamic webpage that runs on an Amazon EC2 instance. Configure the 
+webpage to use the JSON document in combination with the event message to look up and 
+respond with a redirect URL. 
+B. Create an Application Load Balancer that includes HTTP and HTTPS listeners. 
+C. Create an AWS Lambda function that uses the JSON document in combination with the 
+event message to look up and respond with a redirect URL. 
+D. Use an Amazon API Gateway API with a custom domain to publish an AWS Lambda 
+function. 
+E. Create an Amazon CloudFront distribution. Deploy a Lambda@Edge function. 
+SAP-C02 
+ 
+ 
+19 
+https://Xcerts.com 
+F. Create an SSL certificate by using AWS Certificate Manager (ACM). Include the domains 
+as Subject Alternative Names. 
+ 
+Answer(s): B, C, F 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> B,C,</div><div class="row keys">🔑 <b>Keywords:</b> api gateway, cloudfront, lambda, ou, rds, route 53</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q17" class="card"><div class="qblock"><b>Q17</b>
+A company’s solutions architect is reviewing a web application that runs on AWS. The 
+application references static assets in an Amazon S3 bucket in the us-east-1 Region. The 
+company needs resiliency across multiple AWS Regions. The company already has created 
+an S3 bucket in a second Region.  
+ 
+Which solution will meet these requirements with the LEAST operational overhead?
+
+A. Configure the application to write each object to both S3 buckets. Set up an Amazon 
+Route 53 public hosted zone with a record set by using a weighted routing policy for each S3 
+bucket. Configure the application to reference the objects by using the Route 53 DNS name. 
+B. Create an AWS Lambda function to copy objects from the S3 bucket in us-east-1 to the 
+S3 bucket in the second Region. Invoke the Lambda function each time an object is written 
+to the S3 bucket in us-east-1. Set up an Amazon CloudFront distribution with an origin group 
+that contains the two S3 buckets as origins. 
+C. Configure replication on the S3 bucket in us-east-1 to replicate objects to the S3 bucket in 
+the second Region. Set up an Amazon CloudFront distribution with an origin group that 
+contains the two S3 buckets as origins. 
+D. Configure replication on the S3 bucket in us-east-1 to replicate objects to the S3 bucket in 
+the second Region. If failover is required, update the application code to load S3 objects 
+from the S3 bucket in the second Region. 
+ 
+Answer(s): C 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> cloudfront, lambda, ou, route 53</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q18" class="card"><div class="qblock"><b>Q18</b>
+A video processing company has an application that downloads images from an Amazon S3 
+bucket, processes the images, stores a transformed image in a second S3 bucket, and 
+updates metadata about the image in an Amazon DynamoDB table. The application is 
+written in Node.js and runs by using an AWS Lambda function. The Lambda function is 
+invoked when a new image is uploaded to Amazon S3. 
+ 
+The application ran without incident for a while. However, the size of the images has grown 
+significantly. The Lambda function is now failing frequently with timeout errors. The function 
+timeout is set to its maximum value. A solutions architect needs to refactor the application’s 
+SAP-C02 
+ 
+ 
+38 
+https://Xcerts.com 
+architecture to prevent invocation failures. The company does not want to manage the 
+underlying infrastructure. 
+ 
+Which combination of steps should the solutions architect take to meet these requirements? 
+(Choose two.)
+
+A. Modify the application deployment by building a Docker image that contains the 
+application code. Publish the image to Amazon Elastic Container Registry (Amazon ECR). 
+B. Create a new Amazon Elastic Container Service (Amazon ECS) task definition with a 
+compatibility type of AWS Fargate. Configure the task definition to use the new image in 
+Amazon Elastic Container Registry (Amazon ECR). Adjust the Lambda function to invoke an 
+ECS task by using the ECS task definition when a new file arrives in Amazon S3. 
+C. Create an AWS Step Functions state machine with a Parallel state to invoke the Lambda 
+function. Increase the provisioned concurrency of the Lambda function. 
+D. Create a new Amazon Elastic Container Service (Amazon ECS) task definition with a 
+compatibility type of Amazon EC2. Configure the task definition to use the new image in 
+Amazon Elastic Container Registry (Amazon ECR). Adjust the Lambda function to invoke an 
+ECS task by using the ECS task definition when a new file arrives in Amazon S3. 
+E. Modify the application to store images on Amazon Elastic File System (Amazon EFS) and 
+to store metadata on an Amazon RDS DB instance. Adjust the Lambda function to mount 
+the EFS file share. 
+ 
+Answer(s): A, B 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> A,B</div><div class="row keys">🔑 <b>Keywords:</b> dynamodb, lambda, ou, rds</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q19" class="card"><div class="qblock"><b>Q19</b>
+A company runs an IoT platform on AWS. IoT sensors in various locations send data to the 
+company’s Node.js API servers on Amazon EC2 instances running behind an Application 
+Load Balancer. The data is stored in an Amazon RDS MySQL DB instance that uses a 4 TB 
+General Purpose SSD volume. 
+ 
+The number of sensors the company has deployed in the field has increased over time, and 
+is expected to grow significantly. The API servers are consistently overloaded and RDS 
+metrics show high write latency. 
+ 
+Which of the following steps together will resolve the issues permanently and enable growth 
+as new sensors are provisioned, while keeping this platform cost-efficient? (Choose two.)
+
+A. Resize the MySQL General Purpose SSD storage to 6 TB to improve the volume’s IOPS. 
+B. Re-architect the database tier to use Amazon Aurora instead of an RDS MySQL DB 
+instance and add read replicas. 
+C. Leverage Amazon Kinesis Data Streams and AWS Lambda to ingest and process the raw 
+data. 
+D. Use AWS X-Ray to analyze and debug application issues and add more API servers to 
+match the load. 
+E. Re-architect the database tier to use Amazon DynamoDB instead of an RDS MySQL DB 
+instance. 
+ 
+Answer(s): C, E 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> C,</div><div class="row keys">🔑 <b>Keywords:</b> aurora, dynamodb, lambda, ou, rds</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>A</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section><section id="q20" class="card"><div class="qblock"><b>Q20</b>
+A solutions architect is auditing the security setup or an AWS Lambda function for a 
+company. The Lambda function retrieves, the latest changes from an Amazon Aurora 
+database. The Lambda function and the database run in the same VPC. Lambda 
+environment variables are providing the database credentials to the Lambda function. 
+ 
+The Lambda function aggregates data and makes the data available in an Amazon S3 
+bucket that is configured for server-side encryption with AWS KMS managed encryption 
+keys (SSE-KMS). The data must not travel across the Internet. If any database credentials 
+become compromised, the company needs a solution that minimizes the impact of the 
+compromise. 
+ 
+What should the solutions architect recommend to meet these requirements?
+
+A. Enable IAM database authentication on the Aurora DB cluster. Change the IAM role for 
+the Lambda function to allow the function to access the database by using IAM database 
+authentication. Deploy a gateway VPC endpoint for Amazon S3 in the VPC. 
+B. Enable IAM database authentication on the Aurora DB cluster. Change the IAM role for 
+the Lambda function to allow the function to access the database by using IAM database 
+authentication. Enforce HTTPS on the connection to Amazon S3 during data transfers. 
+C. Save the database credentials in AWS Systems Manager Parameter Store. Set up 
+password rotation on the credentials in Parameter Store. Change the IAM role for the 
+Lambda function to allow the function to access Parameter Store. Modify the Lambda 
+SAP-C02 
+ 
+ 
+64 
+https://Xcerts.com 
+function to retrieve the credentials from Parameter Store. Deploy a gateway VPC endpoint 
+for Amazon S3 in the VPC. 
+D. Save the database credentials in AWS Secrets Manager. Set up password rotation on the 
+credentials in Secrets Manager. Change the IAM role for the Lambda function to allow the 
+function to access Secrets Manager. Modify the Lambda function to retrieve the credentials 
+from Secrets Manager. Enforce HTTPS on the connection to Amazon S3 during data 
+transfers. 
+ 
+Answer(s): A 
+ 
+</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> aurora, kms, lambda, ou, ram, vpc endpoint</div><div class="row elim">⛔️ <b>Elimination Logic:</b></div><ul><li><b>B</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>C</b> — Does not meet the core requirement or adds unnecessary overhead.</li><li><b>D</b> — Does not meet the core requirement or adds unnecessary overhead.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native managed service that maps directly to the keywords; avoid DIY servers or non‑failover patterns.</div><div class="hr"></div></section></main><aside><div class="note"><h3>🔧 Resolver cheat‑sheet</h3><ul><li>Inbound = on‑prem ➜ PHZ (DX/VPN)</li><li>Outbound = VPC ➜ on‑prem/Internet DNS</li><li>Associate PHZ to every resolver VPC</li><li>Share via RAM + Resolver rules</li></ul></div><div class="note"><h3>🧭 TGW vs Peering</h3><ul><li>TGW hub‑and‑spoke, route tables & isolation</li><li>Peering = no transitive routing, bad at scale</li><li>Automate with StackSets + RAM</li></ul></div><div class="note"><h3>🔒 Private connectivity picks</h3><ul><li>PrivateLink = consume NLB privately</li><li>Gateway EP = S3/DDB private access; kills NAT $</li><li>No routing changes for PrivateLink; DNS switch</li></ul></div><div class="note"><h3>🪪 Identity Center</h3><ul><li>Integrate AD via SAML/SCIM</li><li>Permission Sets ➜ account assignments</li><li>Central identities; ephemeral roles</li></ul></div><div class="note"><h3>🛡️ SCP truths</h3><ul><li>SCPs only restrict; never grant</li><li>Effective perms = IAM ∩ SCP ∩ Boundary</li><li>Use onboarding OU for exceptions</li></ul></div></aside></div></body></html>
