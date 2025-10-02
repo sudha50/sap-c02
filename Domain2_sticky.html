@@ -12,244 +12,244 @@
   .index{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px} .index a{color:#9fb4ff;text-decoration:none;font-size:13px} .index a:hover{text-decoration:underline}
   .qid{color:#9fb4ff;font-weight:600;margin-bottom:6px}
 </style></head><body><div class="page">
-<header><h1>Domain 2 — New Solutions</h1><div class="subtitle">Exam-style questions (untouched) + 🎯 answer, 🔑 keywords, ⛔ per‑option eliminations (A‑D), 🧠 analogy</div></header>
+<header><h1>Domain 2 — New Solutions</h1><div class="subtitle">Exam-style questions (untouched) + 🎯 answer, 🔑 keywords, ⛔ option-by-option eliminations, 🧠 analogy (memorable)</div></header>
 <nav class="card"><div class="qid">Jump to question</div><ul class="index"><li><a href="#q1">Q1</a></li><li><a href="#q2">Q2</a></li><li><a href="#q3">Q3</a></li><li><a href="#q4">Q4</a></li><li><a href="#q5">Q5</a></li><li><a href="#q6">Q6</a></li><li><a href="#q7">Q7</a></li><li><a href="#q8">Q8</a></li><li><a href="#q9">Q9</a></li><li><a href="#q10">Q10</a></li><li><a href="#q11">Q11</a></li><li><a href="#q12">Q12</a></li><li><a href="#q13">Q13</a></li><li><a href="#q14">Q14</a></li><li><a href="#q15">Q15</a></li><li><a href="#q16">Q16</a></li><li><a href="#q17">Q17</a></li><li><a href="#q18">Q18</a></li></ul></nav><main class='content'><section id="q1" class="card"><div class="qblock"><b>Q1</b>
-A solutions architect wants to make sure that only AWS users or roles with suitable 
-permissions can access a new Amazon API Gateway endpoint. The solutions architect 
-wants an end-to-end view of each request to analyze the latency of the request and create 
-service maps. 
- 
-How can the solutions architect design the API Gateway access control and perform request 
+A solutions architect wants to make sure that only AWS users or roles with suitable
+permissions can access a new Amazon API Gateway endpoint. The solutions architect
+wants an end-to-end view of each request to analyze the latency of the request and create
+service maps.
+
+How can the solutions architect design the API Gateway access control and perform request
 inspections?
 
 A. For the API Gateway method, set the authorization to AWS_IAM. Then, give the IAM user
 B. For the API Gateway resource, set CORS to enabled and only return the company's
 C. Create an AWS Lambda function as the custom authorizer, ask the API client to pass the
-D. Create a client certificate for API Gateway. Distribute the certificate to the AWS users and</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> api gateway</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Does not address the specific latency path described in the stem.</li><li><b>C</b> — Does not address the specific latency path described in the stem.</li><li><b>D</b> — Does not address the specific latency path described in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q2" class="card"><div class="qblock"><b>Q2</b>
-A company that provisions job boards for a seasonal workforce is seeing an increase in 
-traffic and usage. The backend services run on a pair of Amazon EC2 instances behind an 
-Application Load Balancer with Amazon DynamoDB as the datastore. Application read and 
-write traffic is slow during peak seasons. 
- 
-Which option provides a scalable application architecture to handle peak seasons with the 
+D. Create a client certificate for API Gateway. Distribute the certificate to the AWS users and</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> api gateway</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Doesn’t reduce the latency path described (wrong layer/service).</li><li><b>C</b> — Doesn’t reduce the latency path described (wrong layer/service).</li><li><b>D</b> — Doesn’t reduce the latency path described (wrong layer/service).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Gateway endpoints are like private side doors into S3/DynamoDB, avoiding the public street (NAT/Internet).</div><div class="hr"></div></section><section id="q2" class="card"><div class="qblock"><b>Q2</b>
+A company that provisions job boards for a seasonal workforce is seeing an increase in
+traffic and usage. The backend services run on a pair of Amazon EC2 instances behind an
+Application Load Balancer with Amazon DynamoDB as the datastore. Application read and
+write traffic is slow during peak seasons.
+
+Which option provides a scalable application architecture to handle peak seasons with the
 LEAST development effort?
 
 A. Migrate the backend services to AWS Lambda. Increase the read and write capacity of
 B. Migrate the backend services to AWS Lambda. Configure DynamoDB to use global
 C. Use Auto Scaling groups for the backend services. Use DynamoDB auto scaling.
-D. Use Auto Scaling groups for the backend services. Use Amazon Simple Queue Service</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> dynamodb, rds</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>D</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q3" class="card"><div class="qblock"><b>Q3</b>
-A company is running a serverless application that consists of several AWS Lambda 
-functions and Amazon DynamoDB tables. The company has created new functionality that 
-requires the Lambda functions to access an Amazon Neptune DB cluster. The Neptune DB 
-cluster is located in three subnets in a VPC. 
- 
-Which of the possible solutions will allow the Lambda functions to access the Neptune DB 
+D. Use Auto Scaling groups for the backend services. Use Amazon Simple Queue Service</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> dynamodb, rds</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>D</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Gateway endpoints are like private side doors into S3/DynamoDB, avoiding the public street (NAT/Internet).</div><div class="hr"></div></section><section id="q3" class="card"><div class="qblock"><b>Q3</b>
+A company is running a serverless application that consists of several AWS Lambda
+functions and Amazon DynamoDB tables. The company has created new functionality that
+requires the Lambda functions to access an Amazon Neptune DB cluster. The Neptune DB
+cluster is located in three subnets in a VPC.
+
+Which of the possible solutions will allow the Lambda functions to access the Neptune DB
 cluster and DynamoDB tables? (Choose two.)
 
 A. Create three public subnets in the Neptune VPC, and route traffic through an internet
 B. Create three private subnets in the Neptune VPC, and route internet traffic through a NAT
 C. Host the Lambda functions outside the VPUpdate the Neptune security group to allow
-D. Host the Lambda functions outside the VPC. Create a VPC endpoint for the Neptune</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> dynamodb, lambda</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q4" class="card"><div class="qblock"><b>Q4</b>
-A company is deploying AWS Lambda functions that access an Amazon RDS for 
-PostgreSQL database. The company needs to launch the Lambda functions in a QA 
-environment and in a production environment. 
- 
-The company must not expose credentials within application code and must rotate 
-passwords automatically. 
- 
+D. Host the Lambda functions outside the VPC. Create a VPC endpoint for the Neptune</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> dynamodb, lambda</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Gateway endpoints are like private side doors into S3/DynamoDB, avoiding the public street (NAT/Internet).</div><div class="hr"></div></section><section id="q4" class="card"><div class="qblock"><b>Q4</b>
+A company is deploying AWS Lambda functions that access an Amazon RDS for
+PostgreSQL database. The company needs to launch the Lambda functions in a QA
+environment and in a production environment.
+
+The company must not expose credentials within application code and must rotate
+passwords automatically.
+
 Which solution will meet these requirements?
 
 A. Store the database credentials for both environments in AWS Systems Manager
 B. Store the database credentials for both environments in AWS Secrets Manager with
 C. Store the database credentials for both environments in AWS Key Management Service
-D. Create separate S3 buckets for the QA environment and the production environment.</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> lambda, rds</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q5" class="card"><div class="qblock"><b>Q5</b>
-A health insurance company stores personally identifiable information (PII) in an Amazon S3 
+D. Create separate S3 buckets for the QA environment and the production environment.</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> lambda, rds</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q5" class="card"><div class="qblock"><b>Q5</b>
+A health insurance company stores personally identifiable information (PII) in an Amazon S3
 bucket. The company uses server-side encryption with S3 managed encryption keys (SSE-
-S3) to encrypt the objects. According to a new requirement, all current and future objects in 
-the S3 bucket must be encrypted by keys that the company’s security team manages. The 
-S3 bucket does not have versioning enabled. 
- 
+S3) to encrypt the objects. According to a new requirement, all current and future objects in
+the S3 bucket must be encrypted by keys that the company’s security team manages. The
+S3 bucket does not have versioning enabled.
+
 Which solution will meet these requirements?
 
 A. In the S3 bucket properties, change the default encryption to SSE-S3 with a customer
 B. In the S3 bucket properties, change the default encryption to server-side encryption with
 C. In the S3 bucket properties, change the default encryption to server-side encryption with
-D. In the S3 bucket properties, change the default encryption to AES-256 with a customer</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q6" class="card"><div class="qblock"><b>Q6</b>
-A company has a monolithic application that is critical to the company’s business. The 
-company hosts the application on an Amazon EC2 instance that runs Amazon Linux 2. The 
-company’s application team receives a directive from the legal department to back up the 
-data from the instance’s encrypted Amazon Elastic Block Store (Amazon EBS) volume to an 
-Amazon S3 bucket. The application team does not have the administrative SSH key pair for 
-the instance. The application must continue to serve the users. 
- 
+D. In the S3 bucket properties, change the default encryption to AES-256 with a customer</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Gateway endpoints are like private side doors into S3/DynamoDB, avoiding the public street (NAT/Internet).</div><div class="hr"></div></section><section id="q6" class="card"><div class="qblock"><b>Q6</b>
+A company has a monolithic application that is critical to the company’s business. The
+company hosts the application on an Amazon EC2 instance that runs Amazon Linux 2. The
+company’s application team receives a directive from the legal department to back up the
+data from the instance’s encrypted Amazon Elastic Block Store (Amazon EBS) volume to an
+Amazon S3 bucket. The application team does not have the administrative SSH key pair for
+the instance. The application must continue to serve the users.
+
 Which solution will meet these requirements?
 
 A. Attach a role to the instance with permission to write to Amazon S3. Use the AWS
 B. Create an image of the instance with the reboot option turned on. Launch a new EC2
 C. Take a snapshot of the EBS volume by using Amazon Data Lifecycle Manager (Amazon
-D. Create an image of the instance. Launch a new EC2 instance from the image. Attach a</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q7" class="card"><div class="qblock"><b>Q7</b>
-A solutions architect is investigating an issue in which a company cannot establish new 
-sessions in Amazon Workspaces. An initial analysis indicates that the issue involves user 
-profiles. The Amazon Workspaces environment is configured to use Amazon FSx for 
-Windows File Server as the profile share storage. The FSx for Windows File Server file 
-system is configured with 10 TB of storage. 
- 
-The solutions architect discovers that the file system has reached Its maximum capacity. 
-The solutions architect must ensure that users can regain access. The solution also must 
-prevent the problem from occurring again. 
- 
- 
- 
+D. Create an image of the instance. Launch a new EC2 instance from the image. Attach a</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Gateway endpoints are like private side doors into S3/DynamoDB, avoiding the public street (NAT/Internet).</div><div class="hr"></div></section><section id="q7" class="card"><div class="qblock"><b>Q7</b>
+A solutions architect is investigating an issue in which a company cannot establish new
+sessions in Amazon Workspaces. An initial analysis indicates that the issue involves user
+profiles. The Amazon Workspaces environment is configured to use Amazon FSx for
+Windows File Server as the profile share storage. The FSx for Windows File Server file
+system is configured with 10 TB of storage.
+
+The solutions architect discovers that the file system has reached Its maximum capacity.
+The solutions architect must ensure that users can regain access. The solution also must
+prevent the problem from occurring again.
+
+
+
 Which solution will meet these requirements?
 
 A. Remove old user profiles to create space. Migrate the user profiles to an Amazon FSx for
 B. Increase capacity by using the update-file-system command. Implement an Amazon
 C. Monitor the file system by using the FreeStorageCapacity metric in Amazon CloudWatch.
-D. Remove old user profiles to create space. Create an additional FSx for Windows File</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> fsx</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q8" class="card"><div class="qblock"><b>Q8</b>
-A company has more than 10,000 sensors that send data to an on-premises Apache Kafka 
+D. Remove old user profiles to create space. Create an additional FSx for Windows File</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> fsx</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q8" class="card"><div class="qblock"><b>Q8</b>
+A company has more than 10,000 sensors that send data to an on-premises Apache Kafka
 server by using the Message Queuing Telemetry Transport (MQTT) protocol. The on-
-premises Kafka server transforms the data and then stores the results as objects in an 
-Amazon S3 bucket. 
- 
-Recently, the Kafka server crashed. The company lost sensor data while the server was 
-being restored. A solutions architect must create a new design on AWS that is highly 
-available and scalable to prevent a similar occurrence. 
- 
+premises Kafka server transforms the data and then stores the results as objects in an
+Amazon S3 bucket.
+
+Recently, the Kafka server crashed. The company lost sensor data while the server was
+being restored. A solutions architect must create a new design on AWS that is highly
+available and scalable to prevent a similar occurrence.
+
 Which solution will meet these requirements?
 
 A. Launch two Amazon EC2 instances to host the Kafka server in an active/standby
 B. Migrate the on-premises Kafka server to Amazon Managed Streaming for Apache Kafka
 C. Deploy AWS IoT Core, and connect it to an Amazon Kinesis Data Firehose delivery
-D. Deploy AWS IoT Core, and launch an Amazon EC2 instance to host the Kafka server.</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q9" class="card"><div class="qblock"><b>Q9</b>
-A company uses an Amazon Aurora PostgreSQL DB cluster for applications in a single AWS 
-Region. The company's database team must monitor all data activity on all the databases. 
- 
+D. Deploy AWS IoT Core, and launch an Amazon EC2 instance to host the Kafka server.</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds an EC2 tier to host endpoints — opposite of serverless/low‑ops requirement.</li><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Adds an EC2 tier to host endpoints — opposite of serverless/low‑ops requirement.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Building custom OCR is like writing your own spell‑checker — use Textract’s built‑in smarts instead.</div><div class="hr"></div></section><section id="q9" class="card"><div class="qblock"><b>Q9</b>
+A company uses an Amazon Aurora PostgreSQL DB cluster for applications in a single AWS
+Region. The company's database team must monitor all data activity on all the databases.
+
 Which solution will achieve this goal?
 
 A. Set up an AWS Database Migration Service (AWS DMS) change data capture (CDC)
 B. Start a database activity stream on the Aurora DB cluster to capture the activity stream in
 C. Start a database activity stream on the Aurora DB cluster to push the activity stream to an
-D. Set up an AWS Database Migration Service (AWS DMS) change data capture (CDC)</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> aurora</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q10" class="card"><div class="qblock"><b>Q10</b>
-A team of data scientists is using Amazon SageMaker instances and SageMaker APIs to 
-train machine learning (ML) models. The SageMaker instances are deployed in a VPC that 
-does not have access to or from the internet. Datasets for ML model training are stored in an 
-Amazon S3 bucket. Interface VPC endpoints provide access to Amazon S3 and the 
-SageMaker APIs. 
- 
-Occasionally, the data scientists require access to the Python Package Index (PyPI) 
-repository to update Python packages that they use as part of their workflow. A solutions 
-architect must provide access to the PyPI repository while ensuring that the SageMaker 
-instances remain isolated from the internet. 
- 
+D. Set up an AWS Database Migration Service (AWS DMS) change data capture (CDC)</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> aurora</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q10" class="card"><div class="qblock"><b>Q10</b>
+A team of data scientists is using Amazon SageMaker instances and SageMaker APIs to
+train machine learning (ML) models. The SageMaker instances are deployed in a VPC that
+does not have access to or from the internet. Datasets for ML model training are stored in an
+Amazon S3 bucket. Interface VPC endpoints provide access to Amazon S3 and the
+SageMaker APIs.
+
+Occasionally, the data scientists require access to the Python Package Index (PyPI)
+repository to update Python packages that they use as part of their workflow. A solutions
+architect must provide access to the PyPI repository while ensuring that the SageMaker
+instances remain isolated from the internet.
+
 Which solution will meet these requirements?
 
 A. Create an AWS CodeCommit repository for each package that the data scientists need to
 B. Create a NAT gateway in the VPC. Configure VPC routes to allow access to the internet
 C. Create a NAT instance in the VPConfigure VPC routes to allow access to the internet.
-D. Create an AWS CodeArtifact domain and repository. Add an external connection for</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> s3, vpc endpoint</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q11" class="card"><div class="qblock"><b>Q11</b>
-A company is using Amazon API Gateway to deploy a private REST API that will provide 
-access to sensitive data. The API must be accessible only from an application that is 
-deployed in a VPC. The company deploys the API successfully. However, the API is not 
-accessible from an Amazon EC2 instance that is deployed in the VPC. 
- 
+D. Create an AWS CodeArtifact domain and repository. Add an external connection for</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> s3, vpc endpoint</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Gateway endpoints are like private side doors into S3/DynamoDB, avoiding the public street (NAT/Internet).</div><div class="hr"></div></section><section id="q11" class="card"><div class="qblock"><b>Q11</b>
+A company is using Amazon API Gateway to deploy a private REST API that will provide
+access to sensitive data. The API must be accessible only from an application that is
+deployed in a VPC. The company deploys the API successfully. However, the API is not
+accessible from an Amazon EC2 instance that is deployed in the VPC.
+
 Which solution will provide connectivity between the EC2 instance and the API?
 
 A. Create an interface VPC endpoint for API Gateway. Attach an endpoint policy that allows
 B. Create an interface VPC endpoint for API Gateway. Attach an endpoint policy that allows
 C. Create a Network Load Balancer (NLB) and a VPC link. Configure private integration
-D. Create an Application Load Balancer (ALB) and a VPC Link. Configure private integration</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> api gateway</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q12" class="card"><div class="qblock"><b>Q12</b>
-A company is building an application on AWS. The application sends logs to an Amazon 
-OpenSearch Service cluster for analysis. All data must be stored within a VPC. 
- 
-Some of the company’s developers work from home. Other developers work from three 
-different company office locations. The developers need to access OpenSearch Service to 
-analyze and visualize logs directly from their local development machines. 
- 
+D. Create an Application Load Balancer (ALB) and a VPC Link. Configure private integration</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> api gateway</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q12" class="card"><div class="qblock"><b>Q12</b>
+A company is building an application on AWS. The application sends logs to an Amazon
+OpenSearch Service cluster for analysis. All data must be stored within a VPC.
+
+Some of the company’s developers work from home. Other developers work from three
+different company office locations. The developers need to access OpenSearch Service to
+analyze and visualize logs directly from their local development machines.
+
 Which solution will meet these requirements?
 
 A. Configure and set up an AWS Client VPN endpoint. Associate the Client VPN endpoint
 B. Create a transit gateway, and connect it to the VPC. Create an AWS Site-to-Site VPN.
 C. Create a transit gateway, and connect it to the VPOrder an AWS Direct Connect
-D. Create and configure a bastion host in a public subnet of the VPC. Configure the bastion</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> opensearch</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q13" class="card"><div class="qblock"><b>Q13</b>
-A company that develops consumer electronics with offices in Europe and Asia has 60 TB of 
-software images stored on premises in Europe. The company wants to transfer the images 
-to an Amazon S3 bucket in the ap-northeast-1 Region. New software images are created 
-daily and must be encrypted in transit. The company needs a solution that does not require 
-custom development to automatically transfer all existing and new software images to 
-Amazon S3. 
- 
+D. Create and configure a bastion host in a public subnet of the VPC. Configure the bastion</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> opensearch</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q13" class="card"><div class="qblock"><b>Q13</b>
+A company that develops consumer electronics with offices in Europe and Asia has 60 TB of
+software images stored on premises in Europe. The company wants to transfer the images
+to an Amazon S3 bucket in the ap-northeast-1 Region. New software images are created
+daily and must be encrypted in transit. The company needs a solution that does not require
+custom development to automatically transfer all existing and new software images to
+Amazon S3.
+
 What is the next step in the transfer process?
 
 A. Deploy an AWS DataSync agent and configure a task to transfer the images to the S3
 B. Configure Amazon Kinesis Data Firehose to transfer the images using S3 Transfer
 C. Use an AWS Snowball device to transfer the images with the S3 bucket as the target.
-D. Transfer the images over a Site-to-Site VPN connection using the S3 API with multipart</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q14" class="card"><div class="qblock"><b>Q14</b>
-A company has Linux-based Amazon EC2 instances. Users must access the instances by 
-using SSH with EC2 SSH key pairs. Each machine requires a unique EC2 key pair. 
- 
-The company wants to implement a key rotation policy that will, upon request, automatically 
-rotate all the EC2 key pairs and keep the keys in a securely encrypted place. The company 
-will accept less than 1 minute of downtime during key rotation. 
- 
+D. Transfer the images over a Site-to-Site VPN connection using the S3 API with multipart</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Gateway endpoints are like private side doors into S3/DynamoDB, avoiding the public street (NAT/Internet).</div><div class="hr"></div></section><section id="q14" class="card"><div class="qblock"><b>Q14</b>
+A company has Linux-based Amazon EC2 instances. Users must access the instances by
+using SSH with EC2 SSH key pairs. Each machine requires a unique EC2 key pair.
+
+The company wants to implement a key rotation policy that will, upon request, automatically
+rotate all the EC2 key pairs and keep the keys in a securely encrypted place. The company
+will accept less than 1 minute of downtime during key rotation.
+
 Which solution will meet these requirements?
 
 A. Store all the keys in AWS Secrets Manager. Define a Secrets Manager rotation schedule
 B. Store all the keys in Parameter Store, a capability of AWS Systems Manager, as a string.
 C. Import the EC2 key pairs into AWS Key Management Service (AWS KMS). Configure
-D. Add all the EC2 instances to Fleet Manager, a capability of AWS Systems Manager.</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> scenario mapping, least-ops, managed service</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q15" class="card"><div class="qblock"><b>Q15</b>
-During an audit, a security team discovered that a development team was putting IAM user 
-secret access keys in their code and then committing it to an AWS CodeCommit repository. 
-The security team wants to automatically find and remediate instances of this security 
-vulnerability. 
- 
+D. Add all the EC2 instances to Fleet Manager, a capability of AWS Systems Manager.</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> scenario mapping, least‑ops, managed service</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q15" class="card"><div class="qblock"><b>Q15</b>
+During an audit, a security team discovered that a development team was putting IAM user
+secret access keys in their code and then committing it to an AWS CodeCommit repository.
+The security team wants to automatically find and remediate instances of this security
+vulnerability.
+
 Which solution will ensure that the credentials are appropriately secured automatically?
 
 A. Run a script nightly using AWS Systems Manager Run Command to search for
 B. Use a scheduled AWS Lambda function to download and scan the application code from
 C. Configure Amazon Macie to scan for credentials in CodeCommit repositories. If
-D. Configure a CodeCommit trigger to invoke an AWS Lambda function to scan new code</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> scenario mapping, least-ops, managed service</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q16" class="card"><div class="qblock"><b>Q16</b>
-A company's solutions architect is evaluating an AWS workload that was deployed several 
-years ago. The application tier is stateless and runs on a single large Amazon EC2 instance 
-that was launched from an AMI. The application stores data in a MySQL database that runs 
-on a single EC2 instance. 
- 
-The CPU utilization on the application server EC2 instance often reaches 100% and causes 
-the application to stop responding. The company manually installs patches on the instances. 
-Patching has caused downtime in the past. The company needs to make the application 
-highly available. 
- 
+D. Configure a CodeCommit trigger to invoke an AWS Lambda function to scan new code</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> scenario mapping, least‑ops, managed service</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q16" class="card"><div class="qblock"><b>Q16</b>
+A company's solutions architect is evaluating an AWS workload that was deployed several
+years ago. The application tier is stateless and runs on a single large Amazon EC2 instance
+that was launched from an AMI. The application stores data in a MySQL database that runs
+on a single EC2 instance.
+
+The CPU utilization on the application server EC2 instance often reaches 100% and causes
+the application to stop responding. The company manually installs patches on the instances.
+Patching has caused downtime in the past. The company needs to make the application
+highly available.
+
 Which solution will meet these requirements with the LEAST development me?
 
 A. Move the application tier to AWS Lambda functions in the existing VPC. Create an
 B. Change the EC2 instance type to a smaller Graviton powered instance type. Use the
 C. Move the application tier to containers by using Docker. Run the containers on Amazon
-D. Create a now AMI that is configured with AWS Systems Manager Agent (SSM Agent).</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> scenario mapping, least-ops, managed service</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>C</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q17" class="card"><div class="qblock"><b>Q17</b>
-A company is rearchitecting its applications to run on AWS. The company’s infrastructure 
-includes multiple Amazon EC2 instances. The company's development team needs different 
-levels of access. The company wants to implement a policy that requires all Windows EC2 
-instances to be joined to an Active Directory domain on AWS. The company also wants to 
-implement enhanced security processes such as multi-factor authentication (MFA). The 
-company wants to use managed AWS services wherever possible. 
- 
+D. Create a now AMI that is configured with AWS Systems Manager Agent (SSM Agent).</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> scenario mapping, least‑ops, managed service</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>C</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q17" class="card"><div class="qblock"><b>Q17</b>
+A company is rearchitecting its applications to run on AWS. The company’s infrastructure
+includes multiple Amazon EC2 instances. The company's development team needs different
+levels of access. The company wants to implement a policy that requires all Windows EC2
+instances to be joined to an Active Directory domain on AWS. The company also wants to
+implement enhanced security processes such as multi-factor authentication (MFA). The
+company wants to use managed AWS services wherever possible.
+
 Which solution will meet these requirements?
 
 A. Create an AWS Directory Service for Microsoft Active Directory implementation. Launch
 B. Create an AWS Directory Service for Microsoft Active Directory implementation. Launch
 C. Create an AWS Directory Service Simple AD implementation. Launch an EC2 instance.
-D. Create an AWS Directory Service Simple AD implementation. Launch an Amazon</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> scenario mapping, least-ops, managed service</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q18" class="card"><div class="qblock"><b>Q18</b>
-A company is creating a solution that can move 400 employees into a remote working 
-environment in the event of an unexpected disaster. The user desktops have a mix of 
-Windows and Linux operating systems. Multiple types of software, such as web browsers 
-and mail clients, are installed on each desktop. 
- 
-A solutions architect needs to implement a solution that can be integrated with the 
-company’s on-premises Active Directory to allow employees to use their existing identity 
-credentials. The solution must provide multifactor authentication (MFA) and must replicate 
-the user experience from the existing desktops. 
- 
+D. Create an AWS Directory Service Simple AD implementation. Launch an Amazon</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> scenario mapping, least‑ops, managed service</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q18" class="card"><div class="qblock"><b>Q18</b>
+A company is creating a solution that can move 400 employees into a remote working
+environment in the event of an unexpected disaster. The user desktops have a mix of
+Windows and Linux operating systems. Multiple types of software, such as web browsers
+and mail clients, are installed on each desktop.
+
+A solutions architect needs to implement a solution that can be integrated with the
+company’s on-premises Active Directory to allow employees to use their existing identity
+credentials. The solution must provide multifactor authentication (MFA) and must replicate
+the user experience from the existing desktops.
+
 Which solution will meet these requirements?
 
 A. Use Amazon WorkSpaces for the cloud desktop service. Set up a VPN connection to the
 B. Use Amazon AppStream 2.0 as an application streaming service. Configure Desktop
 C. Use Amazon WorkSpaces for the cloud desktop service. Set up a VPN connection to the
-D. Use Amazon AppStream 2.0 as an application streaming service. Set up Active Directory</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> scenario mapping, least-ops, managed service</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section></main><aside></aside></div></body></html>
+D. Use Amazon AppStream 2.0 as an application streaming service. Set up Active Directory</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> scenario mapping, least‑ops, managed service</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section></main><aside></aside></div></body></html>

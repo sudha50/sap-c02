@@ -12,221 +12,221 @@
   .index{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px} .index a{color:#9fb4ff;text-decoration:none;font-size:13px} .index a:hover{text-decoration:underline}
   .qid{color:#9fb4ff;font-weight:600;margin-bottom:6px}
 </style></head><body><div class="page">
-<header><h1>Domain 3 — Continuous Improvement</h1><div class="subtitle">Exam-style questions (untouched) + 🎯 answer, 🔑 keywords, ⛔ per‑option eliminations (A‑D), 🧠 analogy</div></header>
+<header><h1>Domain 3 — Continuous Improvement</h1><div class="subtitle">Exam-style questions (untouched) + 🎯 answer, 🔑 keywords, ⛔ option-by-option eliminations, 🧠 analogy (memorable)</div></header>
 <nav class="card"><div class="qid">Jump to question</div><ul class="index"><li><a href="#q1">Q1</a></li><li><a href="#q2">Q2</a></li><li><a href="#q3">Q3</a></li><li><a href="#q4">Q4</a></li><li><a href="#q5">Q5</a></li><li><a href="#q6">Q6</a></li><li><a href="#q7">Q7</a></li><li><a href="#q8">Q8</a></li><li><a href="#q9">Q9</a></li><li><a href="#q10">Q10</a></li><li><a href="#q11">Q11</a></li><li><a href="#q12">Q12</a></li><li><a href="#q13">Q13</a></li><li><a href="#q14">Q14</a></li><li><a href="#q15">Q15</a></li></ul></nav><main class='content'><section id="q1" class="card"><div class="qblock"><b>Q1</b>
-A company is deploying a new API to AWS. The API uses Amazon API Gateway with a 
-Regional API endpoint and an AWS Lambda function for hosting. The API retrieves data 
-from an external vendor API, stores data in an Amazon DynamoDB global table, and 
-retrieves data from the DynamoDB global table The API key for the vendor's API is stored in 
-AWS Secrets Manager and is encrypted with a customer managed key in AWS Key 
-Management Service (AWS KMS). The company has deployed its own API into a single 
-AWS Region. 
- 
-A solutions architect needs to change the API components of the company’s API to ensure 
-that the components can run across multiple Regions in an active-active configuration. 
- 
-Which combination of changes will meet this requirement with the LEAST operational 
+A company is deploying a new API to AWS. The API uses Amazon API Gateway with a
+Regional API endpoint and an AWS Lambda function for hosting. The API retrieves data
+from an external vendor API, stores data in an Amazon DynamoDB global table, and
+retrieves data from the DynamoDB global table The API key for the vendor's API is stored in
+AWS Secrets Manager and is encrypted with a customer managed key in AWS Key
+Management Service (AWS KMS). The company has deployed its own API into a single
+AWS Region.
+
+A solutions architect needs to change the API components of the company’s API to ensure
+that the components can run across multiple Regions in an active-active configuration.
+
+Which combination of changes will meet this requirement with the LEAST operational
 overhead? (Choose three.)
 
 A. Deploy the API to multiple Regions. Configure Amazon Route 53 with custom domain
 B. Create a new KMS multi-Region customer managed key. Create a new KMS customer
 C. Replicate the existing Secrets Manager secret to other Regions. For each in-scope
-D. Create a new AWS managed KMS key in each in-scope Region. Convert an existing key</div><div class="row ans">🎯 <b>Correct Answer:</b> A, B, C</div><div class="row keys">🔑 <b>Keywords:</b> api gateway, dynamodb, kms, lambda</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>D</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q2" class="card"><div class="qblock"><b>Q2</b>
-A company is hosting a critical application on a single Amazon EC2 instance. The 
-application uses an Amazon ElastiCache for Redis single-node cluster for an in-memory 
-data store. The application uses an Amazon RDS for MariaDB DB instance for a relational 
-database. For the application to function, each piece of the infrastructure must be healthy 
-and must be in an active state. 
- 
-A solutions architect needs to improve the application's architecture so that the infrastructure 
-can automatically recover from failure with the least possible downtime. 
- 
+D. Create a new AWS managed KMS key in each in-scope Region. Convert an existing key</div><div class="row ans">🎯 <b>Correct Answer:</b> A, B, C</div><div class="row keys">🔑 <b>Keywords:</b> api gateway, dynamodb, kms, lambda</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Gateway endpoints are like private side doors into S3/DynamoDB, avoiding the public street (NAT/Internet).</div><div class="hr"></div></section><section id="q2" class="card"><div class="qblock"><b>Q2</b>
+A company is hosting a critical application on a single Amazon EC2 instance. The
+application uses an Amazon ElastiCache for Redis single-node cluster for an in-memory
+data store. The application uses an Amazon RDS for MariaDB DB instance for a relational
+database. For the application to function, each piece of the infrastructure must be healthy
+and must be in an active state.
+
+A solutions architect needs to improve the application's architecture so that the infrastructure
+can automatically recover from failure with the least possible downtime.
+
 Which combination of steps will meet these requirements? (Choose three.)
 
 A. Use an Elastic Load Balancer to distribute traffic across multiple EC2 instances. Ensure
 B. Use an Elastic Load Balancer to distribute traffic across multiple EC2 instances. Ensure
 C. Modify the DB instance to create a read replica in the same Availability Zone. Promote
-D. Modify the DB instance to create a Multi-AZ deployment that extends across two</div><div class="row ans">🎯 <b>Correct Answer:</b> A, D</div><div class="row keys">🔑 <b>Keywords:</b> rds</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>C</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q3" class="card"><div class="qblock"><b>Q3</b>
-A solutions architect needs to implement a client-side encryption mechanism for objects that 
-will be stored in a new Amazon S3 bucket. The solutions architect created a CMK that is 
-stored in AWS Key Management Service (AWS KMS) for this purpose. 
- 
-The solutions architect created the following IAM policy and attached it to an IAM role: 
- 
- 
-During tests, the solutions architect was able to successfully get existing test objects in the 
-S3 bucket. However, attempts to upload a new object resulted in an error message. The 
-error message stated that the action was forbidden. 
- 
+D. Modify the DB instance to create a Multi-AZ deployment that extends across two</div><div class="row ans">🎯 <b>Correct Answer:</b> A, D</div><div class="row keys">🔑 <b>Keywords:</b> rds</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>C</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q3" class="card"><div class="qblock"><b>Q3</b>
+A solutions architect needs to implement a client-side encryption mechanism for objects that
+will be stored in a new Amazon S3 bucket. The solutions architect created a CMK that is
+stored in AWS Key Management Service (AWS KMS) for this purpose.
+
+The solutions architect created the following IAM policy and attached it to an IAM role:
+
+
+During tests, the solutions architect was able to successfully get existing test objects in the
+S3 bucket. However, attempts to upload a new object resulted in an error message. The
+error message stated that the action was forbidden.
+
 Which action must the solutions architect add to the IAM policy to meet all the requirements?
 
 A. kms:GenerateDataKey
 B. kms:GetKeyPolicy
 C. kms:GetPublicKey
-D. kms:Sign</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> kms, s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q4" class="card"><div class="qblock"><b>Q4</b>
-A company is developing a new serverless API by using Amazon API Gateway and AWS 
-Lambda. The company integrated the Lambda functions with API Gateway to use several 
-shared libraries and custom classes. 
- 
-A solutions architect needs to simplify the deployment of the solution and optimize for code 
-reuse. 
+D. kms:Sign</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> kms, s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Gateway endpoints are like private side doors into S3/DynamoDB, avoiding the public street (NAT/Internet).</div><div class="hr"></div></section><section id="q4" class="card"><div class="qblock"><b>Q4</b>
+A company is developing a new serverless API by using Amazon API Gateway and AWS
+Lambda. The company integrated the Lambda functions with API Gateway to use several
+shared libraries and custom classes.
+
+A solutions architect needs to simplify the deployment of the solution and optimize for code
+reuse.
 Which solution will meet these requirements?
 
 A. Deploy the shared libraries and custom classes into a Docker image. Store the image in
 B. Deploy the shared libraries and custom classes to a Docker image. Upload the image to
 C. Deploy the shared libraries and custom classes to a Docker container in Amazon Elastic
-D. Deploy the shared libraries, custom classes, and code for the API's Lambda functions to</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> api gateway, lambda</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q5" class="card"><div class="qblock"><b>Q5</b>
-A company has a critical application in which the data tier is deployed in a single AWS 
-Region. The data tier uses an Amazon DynamoDB table and an Amazon Aurora MySQL DB 
-cluster. The current Aurora MySQL engine version supports a global database. The 
-application tier is already deployed in two Regions. 
- 
-Company policy states that critical applications must have application tier components and 
-data tier components deployed across two Regions. The RTO and RPO must be no more 
-than a few minutes each. A solutions architect must recommend a solution to make the data 
-tier compliant with company policy. 
- 
+D. Deploy the shared libraries, custom classes, and code for the API's Lambda functions to</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> api gateway, lambda</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q5" class="card"><div class="qblock"><b>Q5</b>
+A company has a critical application in which the data tier is deployed in a single AWS
+Region. The data tier uses an Amazon DynamoDB table and an Amazon Aurora MySQL DB
+cluster. The current Aurora MySQL engine version supports a global database. The
+application tier is already deployed in two Regions.
+
+Company policy states that critical applications must have application tier components and
+data tier components deployed across two Regions. The RTO and RPO must be no more
+than a few minutes each. A solutions architect must recommend a solution to make the data
+tier compliant with company policy.
+
 Which combination of steps will meet these requirements? (Choose two.)
 
 A. Add another Region to the Aurora MySQL DB cluster
 B. Add another Region to each table in the Aurora MySQL DB cluster
 C. Set up scheduled cross-Region backups for the DynamoDB table and the Aurora MySQL
-D. Convert the existing DynamoDB table to a global table by adding another Region to its</div><div class="row ans">🎯 <b>Correct Answer:</b> A, D</div><div class="row keys">🔑 <b>Keywords:</b> aurora, dynamodb</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q6" class="card"><div class="qblock"><b>Q6</b>
-A company has millions of objects in an Amazon S3 bucket. The objects are in the S3 
-Standard storage class. All the S3 objects are accessed frequently. The number of users 
-and applications that access the objects is increasing rapidly. The objects are encrypted with 
-server-side encryption with AWS KMS keys (SSE-KMS). 
- 
-A solutions architect reviews the company’s monthly AWS invoice and notices that AWS 
-KMS costs are increasing because of the high number of requests from Amazon S3. The 
-solutions architect needs to optimize costs with minimal changes to the application. 
- 
+D. Convert the existing DynamoDB table to a global table by adding another Region to its</div><div class="row ans">🎯 <b>Correct Answer:</b> A, D</div><div class="row keys">🔑 <b>Keywords:</b> aurora, dynamodb</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Gateway endpoints are like private side doors into S3/DynamoDB, avoiding the public street (NAT/Internet).</div><div class="hr"></div></section><section id="q6" class="card"><div class="qblock"><b>Q6</b>
+A company has millions of objects in an Amazon S3 bucket. The objects are in the S3
+Standard storage class. All the S3 objects are accessed frequently. The number of users
+and applications that access the objects is increasing rapidly. The objects are encrypted with
+server-side encryption with AWS KMS keys (SSE-KMS).
+
+A solutions architect reviews the company’s monthly AWS invoice and notices that AWS
+KMS costs are increasing because of the high number of requests from Amazon S3. The
+solutions architect needs to optimize costs with minimal changes to the application.
+
 Which solution will meet these requirements with the LEAST operational overhead?
 
 A. Create a new S3 bucket that has server-side encryption with customer-provided keys
 B. Create a new S3 bucket that has server-side encryption with Amazon S3 managed keys
 C. Use AWS CloudHSM to store the encryption keys. Create a new S3 bucket. Use S3
-D. Use the S3 Intelligent-Tiering storage class for the S3 bucket. Create an S3 Intelligent-</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> kms, s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>C</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>D</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q7" class="card"><div class="qblock"><b>Q7</b>
-A company needs to optimize the cost of its application on AWS. The application uses AWS 
-Lambda functions and Amazon Elastic Container Service (Amazon ECS) containers that run 
-on AWS Fargate. The application is write-heavy and stores data in an Amazon Aurora 
-MySQL database. 
- 
-The load on the application is not consistent. The application experiences long periods of no 
-usage, followed by sudden and significant increases and decreases in traffic. The database 
-runs on a memory optimized DB instance that cannot handle the load. 
- 
-A solutions architect must design a solution that can scale to handle the changes in traffic. 
- 
- 
- 
+D. Use the S3 Intelligent-Tiering storage class for the S3 bucket. Create an S3 Intelligent-</div><div class="row ans">🎯 <b>Correct Answer:</b> B</div><div class="row keys">🔑 <b>Keywords:</b> kms, s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>C</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>D</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Gateway endpoints are like private side doors into S3/DynamoDB, avoiding the public street (NAT/Internet).</div><div class="hr"></div></section><section id="q7" class="card"><div class="qblock"><b>Q7</b>
+A company needs to optimize the cost of its application on AWS. The application uses AWS
+Lambda functions and Amazon Elastic Container Service (Amazon ECS) containers that run
+on AWS Fargate. The application is write-heavy and stores data in an Amazon Aurora
+MySQL database.
+
+The load on the application is not consistent. The application experiences long periods of no
+usage, followed by sudden and significant increases and decreases in traffic. The database
+runs on a memory optimized DB instance that cannot handle the load.
+
+A solutions architect must design a solution that can scale to handle the changes in traffic.
+
+
+
 Which solution will meet these requirements MOST cost-effectively?
 
 A. Add additional read replicas to the database. Purchase Instance Savings Plans and RDS
 B. Migrate the database to an Aurora DB cluster that has multiple writer instances. Purchase
 C. Migrate the database to an Aurora global database. Purchase Compute Savings Plans
-D. Migrate the database to Aurora Serverless v1. Purchase Compute Savings Plans.</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> aurora, lambda</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>C</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q8" class="card"><div class="qblock"><b>Q8</b>
-A company has an application that uses an Amazon Aurora PostgreSQL DB cluster for the 
-application's database. The DB cluster contains one small primary instance and three larger 
-replica instances. The application runs on an AWS Lambda function. The application makes 
-many short-lived connections to the database's replica instances to perform read-only 
-operations. 
- 
-During periods of high traffic, the application becomes unreliable and the database reports 
-that too many connections are being established. The frequency of high-traffic periods is 
-unpredictable. 
- 
+D. Migrate the database to Aurora Serverless v1. Purchase Compute Savings Plans.</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> aurora, lambda</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>C</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q8" class="card"><div class="qblock"><b>Q8</b>
+A company has an application that uses an Amazon Aurora PostgreSQL DB cluster for the
+application's database. The DB cluster contains one small primary instance and three larger
+replica instances. The application runs on an AWS Lambda function. The application makes
+many short-lived connections to the database's replica instances to perform read-only
+operations.
+
+During periods of high traffic, the application becomes unreliable and the database reports
+that too many connections are being established. The frequency of high-traffic periods is
+unpredictable.
+
 Which solution will improve the reliability of the application?
 
 A. Use Amazon RDS Proxy to create a proxy for the DB cluster. Configure a read-only
 B. Increase the max_connections setting on the DB cluster's parameter group. Reboot all
 C. Configure instance scaling for the DB cluster to occur when the DatabaseConnections
-D. Use Amazon RDS Proxy to create a proxy for the DB cluster. Configure a read-only</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> aurora, lambda</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q9" class="card"><div class="qblock"><b>Q9</b>
-A company runs a software-as-a-service (SaaS) application on AWS. The application 
-consists of AWS Lambda functions and an Amazon RDS for MySQL Multi-AZ database. 
-During market events, the application has a much higher workload than normal. Users notice 
-slow response times during the peak periods because of many database connections. The 
-company needs to improve the scalable performance and availability of the database. 
- 
+D. Use Amazon RDS Proxy to create a proxy for the DB cluster. Configure a read-only</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> aurora, lambda</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q9" class="card"><div class="qblock"><b>Q9</b>
+A company runs a software-as-a-service (SaaS) application on AWS. The application
+consists of AWS Lambda functions and an Amazon RDS for MySQL Multi-AZ database.
+During market events, the application has a much higher workload than normal. Users notice
+slow response times during the peak periods because of many database connections. The
+company needs to improve the scalable performance and availability of the database.
+
 Which solution meets these requirements?
 
 A. Create an Amazon CloudWatch alarm action that triggers a Lambda function to add an
 B. Migrate the database to Amazon Aurora, and add a read replica. Add a database
 C. Migrate the database to Amazon Aurora, and add a read replica. Use Amazon Route 53
-D. Migrate the database to Amazon Aurora, and add an Aurora Replica. Configure Amazon</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> lambda, rds</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>C</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q10" class="card"><div class="qblock"><b>Q10</b>
-A company is running a two-tier web-based application in an on-premises data center. The 
-application layer consists of a single server running a stateful application. The application 
-connects to a PostgreSQL database running on a separate server. The application’s user 
-base is expected to grow significantly, so the company is migrating the application and 
-database to AWS. The solution will use Amazon Aurora PostgreSQL, Amazon EC2 Auto 
-Scaling, and Elastic Load Balancing. 
- 
-Which solution will provide a consistent user experience that will allow the application and 
+D. Migrate the database to Amazon Aurora, and add an Aurora Replica. Configure Amazon</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> lambda, rds</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>C</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q10" class="card"><div class="qblock"><b>Q10</b>
+A company is running a two-tier web-based application in an on-premises data center. The
+application layer consists of a single server running a stateful application. The application
+connects to a PostgreSQL database running on a separate server. The application’s user
+base is expected to grow significantly, so the company is migrating the application and
+database to AWS. The solution will use Amazon Aurora PostgreSQL, Amazon EC2 Auto
+Scaling, and Elastic Load Balancing.
+
+Which solution will provide a consistent user experience that will allow the application and
 database tiers to scale?
 
 A. Enable Aurora Auto Scaling for Aurora Replicas. Use a Network Load Balancer with the
 B. Enable Aurora Auto Scaling for Aurora writers. Use an Application Load Balancer with the
 C. Enable Aurora Auto Scaling for Aurora Replicas. Use an Application Load Balancer with
-D. Enable Aurora Scaling for Aurora writers. Use a Network Load Balancer with the least</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> aurora</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>B</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li><li><b>D</b> — Not aligned with the explicit requirement in the stem (directionality/scale/HA).</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q11" class="card"><div class="qblock"><b>Q11</b>
-A company’s solutions architect is reviewing a web application that runs on AWS. The 
-application references static assets in an Amazon S3 bucket in the us-east-1 Region. The 
-company needs resiliency across multiple AWS Regions. The company already has created 
-an S3 bucket in a second Region.  
- 
+D. Enable Aurora Scaling for Aurora writers. Use a Network Load Balancer with the least</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> aurora</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>B</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li><li><b>D</b> — Not aligned with the exact requirement (directionality/scale/HA/security) stated in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q11" class="card"><div class="qblock"><b>Q11</b>
+A company’s solutions architect is reviewing a web application that runs on AWS. The
+application references static assets in an Amazon S3 bucket in the us-east-1 Region. The
+company needs resiliency across multiple AWS Regions. The company already has created
+an S3 bucket in a second Region.
+
 Which solution will meet these requirements with the LEAST operational overhead?
 
 A. Configure the application to write each object to both S3 buckets. Set up an Amazon
 B. Create an AWS Lambda function to copy objects from the S3 bucket in us-east-1 to the
 C. Configure replication on the S3 bucket in us-east-1 to replicate objects to the S3 bucket in
-D. Configure replication on the S3 bucket in us-east-1 to replicate objects to the S3 bucket in</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>D</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q12" class="card"><div class="qblock"><b>Q12</b>
-A company is building a serverless application that runs on an AWS Lambda function that is 
-attached to a VPC. The company needs to integrate the application with a new service from 
-an external provider. The external provider supports only requests that come from public 
-IPv4 addresses that are in an allow list. 
- 
-The company must provide a single public IP address to the external provider before the 
-application can start using the new service. 
- 
+D. Configure replication on the S3 bucket in us-east-1 to replicate objects to the S3 bucket in</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>D</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Gateway endpoints are like private side doors into S3/DynamoDB, avoiding the public street (NAT/Internet).</div><div class="hr"></div></section><section id="q12" class="card"><div class="qblock"><b>Q12</b>
+A company is building a serverless application that runs on an AWS Lambda function that is
+attached to a VPC. The company needs to integrate the application with a new service from
+an external provider. The external provider supports only requests that come from public
+IPv4 addresses that are in an allow list.
+
+The company must provide a single public IP address to the external provider before the
+application can start using the new service.
+
 Which solution will give the application the ability to access the new service?
 
 A. Deploy a NAT gateway. Associate an Elastic IP address with the NAT gateway. Configure
 B. Deploy an egress-only internet gateway. Associate an Elastic IP address with the egress-
 C. Deploy an internet gateway. Associate an Elastic IP address with the internet gateway.
-D. Deploy an internet gateway. Associate an Elastic IP address with the internet gateway.</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> lambda</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Does not provide automated failover or HA for the described components.</li><li><b>C</b> — Does not provide automated failover or HA for the described components.</li><li><b>D</b> — Does not provide automated failover or HA for the described components.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q13" class="card"><div class="qblock"><b>Q13</b>
-A retail company is hosting an ecommerce website on AWS across multiple AWS Regions. 
-The company wants the website to be operational at all times for online purchases. The 
-website stores data in an Amazon RDS for MySQL DB instance. 
- 
+D. Deploy an internet gateway. Associate an Elastic IP address with the internet gateway.</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> lambda</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Doesn’t provide the automated failover/HA required.</li><li><b>C</b> — Doesn’t provide the automated failover/HA required.</li><li><b>D</b> — Doesn’t provide the automated failover/HA required.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q13" class="card"><div class="qblock"><b>Q13</b>
+A retail company is hosting an ecommerce website on AWS across multiple AWS Regions.
+The company wants the website to be operational at all times for online purchases. The
+website stores data in an Amazon RDS for MySQL DB instance.
+
 Which solution will provide the HIGHEST availability for the database?
 
 A. Configure automated backups on Amazon RDS. In the case of disruption, promote an
 B. Configure global tables and read replicas on Amazon RDS. Activate the cross-Region
 C. Configure global tables and automated backups on Amazon RDS. In the case of
-D. Configure read replicas on Amazon RDS. In the case of disruption, promote a cross-</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> rds</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>C</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q14" class="card"><div class="qblock"><b>Q14</b>
-A company uses Amazon S3 to store files and images in a variety of storage classes. The 
-company's S3 costs have increased substantially during the past year. 
- 
-A solutions architect needs to review data trends for the past 12 months and identity the 
-appropriate storage class for the objects. 
- 
+D. Configure read replicas on Amazon RDS. In the case of disruption, promote a cross-</div><div class="row ans">🎯 <b>Correct Answer:</b> D</div><div class="row keys">🔑 <b>Keywords:</b> rds</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>C</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section><section id="q14" class="card"><div class="qblock"><b>Q14</b>
+A company uses Amazon S3 to store files and images in a variety of storage classes. The
+company's S3 costs have increased substantially during the past year.
+
+A solutions architect needs to review data trends for the past 12 months and identity the
+appropriate storage class for the objects.
+
 Which solution will meet these requirements?
 
 A. Download AWS Cost and Usage Reports for the last 12 months of S3 usage. Review
 B. Use S3 storage class analysis. Import data trends into an Amazon QuickSight dashboard
 C. Use Amazon S3 Storage Lens. Upgrade the default dashboard to include advanced
-D. Use Access Analyzer for S3. Download the Access Analyzer for S3 report for the last 12</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>D</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section><section id="q15" class="card"><div class="qblock"><b>Q15</b>
-A company has purchased appliances from different vendors. The appliances all have IoT 
-sensors. The sensors send status information in the vendors' proprietary formats to a legacy 
-application that parses the information into JSON. The parsing is simple, but each vendor 
-has a unique format. Once daily, the application parses all the JSON records and stores the 
-records in a relational database for analysis. 
- 
-The company needs to design a new data analysis solution that can deliver faster and 
-optimize costs. 
- 
+D. Use Access Analyzer for S3. Download the Access Analyzer for S3 report for the last 12</div><div class="row ans">🎯 <b>Correct Answer:</b> C</div><div class="row keys">🔑 <b>Keywords:</b> s3</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>A</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>D</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Gateway endpoints are like private side doors into S3/DynamoDB, avoiding the public street (NAT/Internet).</div><div class="hr"></div></section><section id="q15" class="card"><div class="qblock"><b>Q15</b>
+A company has purchased appliances from different vendors. The appliances all have IoT
+sensors. The sensors send status information in the vendors' proprietary formats to a legacy
+application that parses the information into JSON. The parsing is simple, but each vendor
+has a unique format. Once daily, the application parses all the JSON records and stores the
+records in a relational database for analysis.
+
+The company needs to design a new data analysis solution that can deliver faster and
+optimize costs.
+
 Which solution will meet these requirements?
 
 A. Connect the IoT sensors to AWS IoT Core. Set a rule to invoke an AWS Lambda function
 B. Migrate the application server to AWS Fargate, which will receive the information from IoT
 C. Create an AWS Transfer for SFTP server. Update the IoT sensor code to send the
-D. Use AWS Snowball Edge to collect data from the IoT sensors directly to perform local</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> rds</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>C</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>D</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Use the AWS managed service that directly addresses the stem’s keywords to minimize ops and risk.</div><div class="hr"></div></section></main><aside></aside></div></body></html>
+D. Use AWS Snowball Edge to collect data from the IoT sensors directly to perform local</div><div class="row ans">🎯 <b>Correct Answer:</b> A</div><div class="row keys">🔑 <b>Keywords:</b> rds</div><div class="row elim">⛔️ <b>Elimination Logic (each option):</b></div><ul><li><b>B</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>C</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li><li><b>D</b> — Adds components/management overhead contrary to the least‑ops/least‑cost requirement in the stem.</li></ul><div class="row analogy">🧠 <b>Analogy:</b> Pick the native AWS tool that exactly matches the keywords — avoid DIY or heavy ops for exam scenarios.</div><div class="hr"></div></section></main><aside></aside></div></body></html>
